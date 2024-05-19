@@ -2,14 +2,8 @@ FROM mariadb:10.6.4-focal
 
 WORKDIR /
 RUN mkdir mysql
-COPY setup.sh /mysql/setup.sh
 COPY 000-startup.sql /mysql/000-startup.sql
-COPY 001-struct.sql.gz /mysql/001-struct.sql.gz
-COPY 002-routines.sql.gz /mysql/002-routines.sql.gz
-COPY 003-data.sql.gz /mysql/003-data.sql.gz
 COPY 004-finish.sql /mysql/004-finish.sql
 # RUN /mysql/setup.sh
-RUN gunzip /mysql/001-struct.sql.gz
-RUN gunzip /mysql/002-routines.sql.gz
-RUN gunzip /mysql/003-data.sql.gz
+# RUN gunzip /mysql/001-struct.sql.gz
 RUN cp /mysql/*.sql /docker-entrypoint-initdb.d/.

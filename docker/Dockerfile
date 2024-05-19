@@ -8,43 +8,29 @@ RUN echo 'post_max_size = 10G' >> /usr/local/etc/php/conf.d/docker-php-post_max_
 
 # install dependencies
 RUN apt-get update
-RUN apt-get install -y build-essential 
-RUN apt-get install -y libfreetype6-dev
-RUN apt-get install -y libjpeg62-turbo-dev
-RUN apt-get install -y libmcrypt-dev
-RUN apt-get install -y libpng-dev
-RUN apt-get install -y curl
-RUN apt-get install -y libcurl4
-RUN apt-get install -y libcurl4-openssl-dev
-RUN apt-get install -y zlib1g-dev
-RUN apt-get install -y libicu-dev
-RUN apt-get install -y openssl
-RUN apt-get install -y libmemcached-dev
-RUN apt-get install -y memcached
-RUN apt-get install -y default-mysql-client
-RUN apt-get install -y libmagickwand-dev
-RUN apt-get install -y unzip
-RUN apt-get install -y libzip-dev
-RUN apt-get install -y zip
-RUN apt-get install -y libldb-dev libldap2-dev
+RUN apt-get install -y build-essential  libpng-dev libfreetype6-dev libjpeg62-turbo-dev
+
+# RUN apt-get install -y libmcrypt-dev
+RUN apt-get install -y libldb-dev libldap2-dev zip unzip libzip-dev libmagickwand-dev default-mysql-client openssl curl libcurl4 libcurl4-openssl-dev zlib1g-dev libicu-dev
+# RUN apt-get install -y libmemcached-dev
+# RUN apt-get install -y memcached
 ## RUN ./configure --with-ldap=/usr
 RUN ln -s /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/libldap.so \
 && ln -s /usr/lib/x86_64-linux-gnu/liblber.so /usr/lib/liblber.so
 
 # memcached
-RUN pecl install memcached-3.1.5
-RUN docker-php-ext-enable memcached
+# RUN pecl install memcached-3.1.5
+# RUN docker-php-ext-enable memcached
 
 # mcrypt
-RUN pecl install mcrypt-1.0.3
-RUN docker-php-ext-enable mcrypt
+# RUN pecl install mcrypt-1.0.3
+# RUN docker-php-ext-enable mcrypt
 
 # configure, install and enable all php packages
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg
 RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
 RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd
 RUN docker-php-ext-configure intl
-RUN docker-php-ext-configure ldap
 RUN docker-php-ext-configure zip
 
 RUN docker-php-ext-install -j$(nproc) pdo_mysql
@@ -53,7 +39,6 @@ RUN docker-php-ext-install -j$(nproc) pdo
 RUN docker-php-ext-install -j$(nproc) gd
 RUN docker-php-ext-install -j$(nproc) intl
 RUN docker-php-ext-install -j$(nproc) zip
-RUN docker-php-ext-install -j$(nproc) ldap
 
 
 # install imagick
