@@ -1,0 +1,313 @@
+# Copyright (C) 2023 ThimPress
+# This file is distributed under the same license as the LearnPress - Announcements plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: LearnPress - Announcements 4.0.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/learnpress-announcements\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-12-25T12:33:16+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: learnpress-announcements\n"
+
+#. Plugin Name of the plugin
+msgid "LearnPress - Announcements"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "http://thimpress.com/learnpress"
+msgstr ""
+
+#. Description of the plugin
+msgid "Announcements add-on for LearnPress."
+msgstr ""
+
+#. Author of the plugin
+msgid "ThimPress"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://thimpress.com"
+msgstr ""
+
+#: inc/admin/settings/email-groups/class-lp-settings-announcements-emails.php:34
+#: inc/admin/views/metabox-content.php:40
+#: inc/class-lp-announcements-post-type.php:54
+#: inc/class-lp-announcements-post-type.php:62
+#: inc/class-lp-announcements-post-type.php:69
+#: inc/load.php:235
+#: inc/load.php:243
+#: inc/load.php:495
+msgid "Announcements"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:47
+msgid "Title Announcement"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:51
+msgid "Content Announcement"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:56
+msgid "Edit Course"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:57
+msgid "Course Title"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:64
+msgid "Multi-courses"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:69
+msgid "Send email to students who were enrolled when create new an announcement"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:74
+msgid "Display the comments on new announcement post"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:79
+msgid "Something is wrong. Please fill up \"Title\" and \"Content\" fields!"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:83
+#: inc/admin/views/popup-loop-item.php:14
+#: inc/functions.php:67
+#: templates/loop/item.php:21
+msgid "No Title"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:113
+#: inc/admin/views/metabox-content.php:114
+msgid "Remove"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:113
+msgid "Are you sure you want to remove these items from announcement?"
+msgstr ""
+
+#: inc/admin/views/metabox-content.php:133
+#: inc/load.php:245
+msgid "Click the button \"Send Mail\" to send the new announcement for all students who were enrolled this course"
+msgstr ""
+
+#: inc/admin/views/popup-not-found.php:10
+msgid "Course is empty"
+msgstr ""
+
+#: inc/admin/views/popup.php:16
+msgid "Select Courses"
+msgstr ""
+
+#: inc/admin/views/popup.php:18
+msgid "Type here to search item"
+msgstr ""
+
+#: inc/admin/views/popup.php:28
+msgid "Select All"
+msgstr ""
+
+#: inc/admin/views/popup.php:32
+#: inc/admin/views/popup.php:34
+msgid "Select"
+msgstr ""
+
+#: inc/admin/views/popup.php:35
+msgid "Close"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:55
+msgid "Add Item"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:56
+msgid "Edit Item"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:57
+msgid "New Item"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:58
+msgid "View Item"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:59
+msgid "Search Items"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:60
+msgid "No items found"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:61
+msgid "No items found in Trash"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:63
+msgid "Item Archives"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:64
+msgid "Insert item"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:65
+msgid "Uploaded to this item"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:70
+#: inc/emails/class-lp-email-announcements.php:46
+msgid "Announcement"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:108
+#: inc/class-lp-announcements-post-type.php:114
+msgid "Course"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:109
+#: inc/class-lp-announcements-post-type.php:115
+msgid "Author"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:140
+msgid "Edit"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:142
+msgid "View"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:147
+msgid "Remove Filter"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:149
+msgid "Filter"
+msgstr ""
+
+#: inc/class-lp-announcements-post-type.php:158
+msgid "Not assigned yet"
+msgstr ""
+
+#: inc/emails/class-lp-email-announcements.php:47
+msgid "Announcement email."
+msgstr ""
+
+#: inc/emails/class-lp-email-announcements.php:52
+msgid "[{{site_title}}] You have a new announcement ({{announcement_name}})"
+msgstr ""
+
+#: inc/emails/class-lp-email-announcements.php:53
+msgid "New Announcement"
+msgstr ""
+
+#: inc/functions.php:87
+msgid "Are you want to send mail for all user?"
+msgstr ""
+
+#: inc/functions.php:87
+msgid "Send Mail"
+msgstr ""
+
+#: inc/functions.php:88
+msgid "Edit Announcement"
+msgstr ""
+
+#: inc/functions.php:89
+msgid "Remove Announcement"
+msgstr ""
+
+#: inc/load.php:253
+msgid "Display Comments"
+msgstr ""
+
+#: inc/load.php:255
+msgid "Allow the users who is enrolled comment for the all announcements"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:140
+msgid "User not found"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:172
+#: inc/push-notifications/class-api.php:500
+msgid "Notification id is required"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:179
+msgid "No user found"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:192
+msgid "Send notification successfully"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:200
+msgid "Database not found, Please activate LearnPress Mobile plugin"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:213
+msgid "No device token"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:219
+msgid "Push notification is disabled"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:431
+msgid "Name is required"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:435
+msgid "Content is required"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:440
+msgid "Media is invalid"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:445
+msgid "Media is invalid. Only accept jpg, jpeg, png, gif"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:468
+msgid "Cannot save notification"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:488
+msgid "Save notification successfully"
+msgstr ""
+
+#: inc/push-notifications/class-api.php:511
+msgid "Delete notification successfully"
+msgstr ""
+
+#: inc/push-notifications/class-cronjob.php:41
+msgid "Once 30 minutes"
+msgstr ""
+
+#: inc/push-notifications/class-init.php:24
+#: inc/push-notifications/class-init.php:25
+msgid "Notifications"
+msgstr ""
+
+#: templates/loop/item.php:22
+msgid "No Content"
+msgstr ""
+
+#: templates/loop/item.php:49
+msgid "<p> Comments is closed </p>"
+msgstr ""
+
+#: templates/loop/not-found.php:20
+msgid "Announcements is empty"
+msgstr ""

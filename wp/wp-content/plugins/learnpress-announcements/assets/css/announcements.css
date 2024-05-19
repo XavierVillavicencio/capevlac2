@@ -1,0 +1,51 @@
+.lp-announcement-item .title {
+    position: relative;
+    background: #f3f3f3;
+    line-height: 50px;
+    padding-left: 20px;
+    border-top: 1px solid #ffffff;
+    margin: 0;
+    font-size: 16px;
+}
+
+.lp-announcement-item .title:focus {
+    outline: none;
+}
+
+.ui-accordion .ui-accordion-header .ui-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    left: auto;
+    background: #95e6f9;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFF;
+    border-radius: 5px;
+    vertical-align: middle;
+    font-size: 10px;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-top: 0;
+}
+
+.lp-announcement-content {
+    background: #f8f8f8;
+}
+
+.lp-announcement-content #comments {
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.lp-announcement-content .comment-list + .comment-respond {
+    padding-top: 0;
+}
+
+.lp-announcement-content textarea {
+    height: 100px;
+    resize: none;
+}

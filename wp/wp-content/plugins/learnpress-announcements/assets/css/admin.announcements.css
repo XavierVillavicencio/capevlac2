@@ -1,0 +1,444 @@
+#announcements .inside {
+    padding: 0 20px;
+}
+
+.rwmb-list_announcements-wrapper .rwmb-label {
+    display: none;
+}
+
+.rwmb-list_announcements-wrapper .rwmb-input {
+    width: 100%;
+}
+
+.lp-announcement__label{
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+    padding: 0;
+    color: #23282d;
+    font-size: 14px;
+    font-weight: 600;
+    flex: 0 0 auto;
+}
+
+.lp-announcement__content{
+   flex: 1 1 auto; 
+}
+
+/* Form announcements */
+.lp-wrap-list-announcements .button {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.lp-form-add-announcement {
+    position: relative;
+}
+
+.lp-form-add-announcement input[type=text],
+.lp-form-add-announcement textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.lp-form-add-announcement label {
+    padding-left: 15px;
+    font-weight: normal;
+}
+
+.button.lp-add-announcement {
+    position: relative;
+    margin-right: 6px;
+}
+
+.button.lp-add-announcement:after {
+    top: 50%;
+    margin-left: 3px;
+    margin-right: auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.lp-form-add-announcement textarea {
+    height: 120px !important;
+    resize: none;
+}
+
+.lp-form-add-announcement .hidden {
+    display: none;
+}
+
+.lp-alert {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.lp-closebtn {
+    margin-top: -3px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.lp-closebtn:hover {
+    color: black;
+}
+
+.lp-wrap-list-announcements input.readonly,
+.lp-wrap-list-announcements input[readonly],
+.lp-wrap-list-announcements textarea.readonly,
+.lp-wrap-list-announcements textarea[readonly] {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.lp-wrap-list-announcements a:focus {
+    box-shadow: none;
+    color: #0073aa;
+}
+
+.lp-wrap-list-announcements {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.list-announcements {
+    /*border-collapse: collapse;*/
+    /*width: 100%;*/
+}
+
+.list-announcements tr {
+    border-bottom: 1px dashed #DDDDDD;
+    margin: -1px 0 0 0;
+    background-color: #FFF;
+}
+
+.list-announcements tr:nth-child(2n+1) {
+    background-color: #FCFCFC;
+}
+
+.list-announcements .section-item-icon {
+    width: 32px;
+    white-space: nowrap;
+}
+
+.list-announcements .learn-press-icon {
+    width: 32px;
+    height: 32px;
+    font-family: dashicons;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: #0085ba;
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.list-announcements .learn-press-icon:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '\f125';
+}
+
+.list-announcements .section-item-input input {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    border: none;
+    font-size: 16px;
+    color: #777;
+}
+
+.list-announcements .lp-item-actions {
+    margin: 0;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 4px;
+}
+
+.list-announcements .lp-button-actions a,
+.list-announcements .item-checkbox {
+    margin-left: 5px;
+}
+
+.list-announcements .lp-item-action {
+    visibility: hidden;
+    opacity: 0;
+    padding-top: 12px;
+    color: #666;
+}
+
+.list-announcements .lp-item-action:hover {
+    color: #0085ba;
+}
+
+.lp_announcement-item:hover {
+    background-color: #F9F9F9;
+}
+
+.lp_announcement-item:hover .lp-item-action {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lp-courses-popup-window {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100000;
+    color: #FFF;
+    background: rgba(48, 48, 48, 0.6);
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lp-modal-search-items {
+    margin-top: 30px;
+    background-color: #FFF;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 768px;
+    max-width: 100%;
+    color: #777;
+    padding: 10px;
+}
+
+.lp-modal-search-items footer {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.lp-modal-search-items footer div {
+    float: right;
+}
+
+.lp-modal-search-items footer input {
+    float: left;
+}
+
+.lp-modal-search-items header input {
+    width: 100%;
+}
+
+article {
+    overflow: auto;
+    margin: 10px 0;
+}
+
+.learnpress-course-notices {
+
+}
+
+.lp-courses-popup-window.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.message-box-wrap {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+    max-width: 70%;
+}
+
+.lp-course-item-select {
+    position: relative;
+    line-height: 30px;
+    display: inline-block;
+    padding-right: 30px;
+    padding-left: 10px;
+    background-color: #dddddd;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.lp-course-item-select .lp-remove-course {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 20px;
+    margin-top: -2px;
+    cursor: pointer;
+}
+
+.lp-course-item-select .lp-remove-course:hover {
+    color: #ffffff;
+}
+
+.rwmb-meta-box .lp-course-item label {
+    font-weight: normal;
+}
+
+.lp-wrap-list-announcements .item-bulk-actions {
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+.item-bulk-actions:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.remove-items-announcements {
+    float: right;
+}
+
+.lp-wrap-list-announcements .lp-button {
+    float: left;
+    display: inline-block;
+}
+
+.lp-wrap-list-announcements .lp-check-items {
+    float: right;
+    font-size: 50px;
+    margin-left: 16px;
+}
+
+.list-announcements {
+    min-height: 50px;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    border: 1px dashed #DDD;
+}
+
+.lp-add-item.button:not(.close) {
+    display: none;
+}
+
+.lp-hidden {
+    display: none;
+}
+
+.remove-items-announcements {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lp-wrap-list-announcements .remove-items-announcements.active {
+    visibility: visible;
+    opacity: 1;
+    background: #f7f7f7;
+    box-shadow: none;
+}
+
+.lp_announcement-item.remove .lp-item-name {
+    color: red;
+}
+
+li.ld_selected label {
+    color: #cccccc;
+    cursor: context-menu;
+}
+
+li.ld_selected input[type="checkbox"] {
+    cursor: context-menu;
+}
+
+.lp-send {
+    position: relative;
+}
+
+.lp-ajax-loading:after {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    bottom: 2px;
+    left: 0;
+    margin-right: 10px;
+    background-image: url(../images/spinner.gif);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.lp-send.lp-active {
+    cursor: context-menu;
+}
+
+.lp-send.lp-active:after {
+    position: absolute;
+    content: '\f147';
+    font-family: 'dashicons';
+    bottom: 0;
+    right: 0;
+    color: #13a547;
+    font-size: 30px;
+}
+
+#announcements .ui-sortable-placeholder {
+    line-height: 40px;
+    visibility: visible !important;
+}
+
+#announcements .ui-sortable-placeholder td {
+    background-image: url("../images/stripe.png");
+}
+
+#announcements .ui-sortable-helper {
+    border-bottom: none;
+}
+
+#announcements .ui-sortable-helper td {
+    background-color: #ffffff !important;
+}
+
+.lp-field-btn {
+    margin-top: 20px;
+}
+
+.button.lp-select-courses {
+    margin-bottom: 10px;
+}
+
+.lp-announcement-column-course {
+    margin-bottom: 5px;
+}
+
+.lp-announcement-column-course .row-actions {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lp-announcement-column-course:hover .row-actions {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lp-field-send-mail {
+    margin: 10px 0;
+}
+
+#field-_lp_announcements_display_comments label {
+    color: inherit;
+}
+
+.lp-add-announcement-button {
+    opacity: 1 !important;
+}

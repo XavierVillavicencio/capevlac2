@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: LearnPress - Announcements\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-24 07:39+0000\n"
+"PO-Revision-Date: 2018-04-24 07:39+0000\n"
+"Last-Translator: admin <phonglq@foobla.com>\n"
+"Language-Team: French (France)\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/learnpress-announcements.php:51
+#, php-format
+msgid ""
+"<strong>%s</strong> addon version %s requires %s version %s or higher is "
+"<strong>installed</strong> and <strong>activated</strong>."
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/learnpress-announcements.php:52
+msgid "LearnPress Announcements"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/learnpress-announcements.php:54
+msgid "LearnPress"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/load.php:132
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/load.php:140
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:55
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:63
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:70
+msgid "Announcements"
+msgstr "Annonces"
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/load.php:142
+msgid ""
+"Click the button \"Send Mail\" to send the new announcement for all students "
+"who were enrolled this course"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/load.php:147
+msgid "Display Comments"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/load.php:149
+msgid "Allow the users who is enrolled comment for the all announcements"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/lp-field.php:101
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/templates/loop/item.php:21
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/popup-loop-item.php:14
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:83
+msgid "No Title"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/lp-field.php:122
+msgid "Are you want to send mail for all user?"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/lp-field.php:123
+msgid "Send Mail"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/lp-field.php:125
+msgid "Edit Announcement"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/lp-field.php:128
+msgid "Remove Announcement"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:56
+msgid "Add Item"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:57
+msgid "Edit Item"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:58
+msgid "New Item"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:59
+msgid "View Item"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:60
+msgid "Search Items"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:61
+msgid "No items found"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:62
+msgid "No items found in Trash"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:64
+msgid "Item Archives"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:65
+msgid "Insert item"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:66
+msgid "Uploaded to this item"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:71
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/emails/class-lp-email-announcements.php:54
+msgid "Announcement"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:105
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:110
+msgid "Course"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:106
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:111
+msgid "Author"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:136
+msgid "Edit"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:138
+msgid "View"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:141
+msgid "Remove Filter"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:143
+msgid "Filter"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/class-lp-announcements-post-type.php:152
+msgid "Not assigned yet"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/emails/class-lp-email-announcements.php:59
+msgid "[{{site_title}}] You have a new announcement ({{announcement_name}})"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/emails/class-lp-email-announcements.php:60
+msgid "New Announcement"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/emails/class-lp-email-announcements.php:90
+msgid "Error! Please try again!"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/emails/class-lp-email-announcements.php:91
+msgid "Error! The course isn't created or is removed."
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/emails/class-lp-email-announcements.php:92
+msgid "Error! The announcement does not exist or is removed."
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/templates/loop/item.php:22
+msgid "No Content"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/templates/loop/item.php:48
+msgid "<p> Comments is closed </p>"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/templates/loop/not-found.php:20
+msgid "Announcements is empty"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/popup-not-found.php:10
+msgid "Course is empty"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/popup.php:16
+msgid "Course Lists"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/popup.php:19
+msgid "Type here to search item"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/popup.php:30
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/popup.php:32
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/popup.php:32
+msgid "Select"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/popup.php:33
+msgid "Close"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:44
+msgid "Title Announcement"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:49
+msgid "Content Announcement"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:55
+msgid "Edit Course"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:55
+msgid "Course Title"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:60
+msgid "Multi-courses"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:66
+msgid ""
+"Send email to students who were enrolled when create new an announcement"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:72
+msgid "Display the comments on new announcement post"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:77
+msgid "Something is wrong. Please fill up \"Title\" and \"Content\" fields!"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:112
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:114
+msgid "Remove"
+msgstr ""
+
+#: Users/phonglo/GIT/learnpress-addons/3.x.x/learnpress-announcements/inc/admin/views/meta-box-field.php:113
+msgid "Are you sure you want to remove these items from announcement?"
+msgstr ""
+
+#. Name of the plugin
+msgid "LearnPress - Announcements"
+msgstr ""
+
+#. Description of the plugin
+msgid "Announcements add-on for LearnPress."
+msgstr ""
+
+#. URI of the plugin
+msgid "http://thimpress.com/learnpress"
+msgstr ""
+
+#. Author of the plugin
+msgid "ThimPress"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://thimpress.com"
+msgstr ""

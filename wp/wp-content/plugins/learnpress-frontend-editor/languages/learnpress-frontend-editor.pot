@@ -1,0 +1,1376 @@
+# Copyright (C) 2023 ThimPress
+# This file is distributed under the same license as the LearnPress - Frontend Editor plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: LearnPress - Frontend Editor 4.0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/learnpress-frontend-editor-v2\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-01-31T12:35:26+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: learnpress-frontend-editor\n"
+
+#: build/frontend-editor.js:117
+msgid "Add new Assignment"
+msgstr ""
+
+#: build/frontend-editor.js:126
+#: build/frontend-editor.js:169
+#: build/frontend-editor.js:145
+#: build/frontend-editor.js:274
+#: build/frontend-editor.js:115
+#: build/frontend-editor.js:160
+#: build/frontend-editor.js:128
+#: build/frontend-editor.js:175
+msgid "Back"
+msgstr ""
+
+#: build/frontend-editor.js:139
+#: build/frontend-editor.js:246
+#: build/frontend-editor.js:650
+#: build/frontend-editor.js:264
+#: build/frontend-editor.js:128
+#: build/frontend-editor.js:141
+#: build/frontend-editor.js:432
+msgid "Save"
+msgstr ""
+
+#: build/frontend-editor.js:53
+#: build/frontend-editor.js:60
+#: build/frontend-editor.js:51
+msgid "Error"
+msgstr ""
+
+#: build/frontend-editor.js:160
+msgid "Edit Assignment"
+msgstr ""
+
+#: build/frontend-editor.js:182
+#: build/frontend-editor.js:296
+#: build/frontend-editor.js:173
+#: build/frontend-editor.js:188
+msgid "Update"
+msgstr ""
+
+#: build/frontend-editor.js:195
+#: build/frontend-editor.js:315
+#: build/frontend-editor.js:161
+#: build/frontend-editor.js:186
+#: build/frontend-editor.js:201
+msgid "Save Draft"
+msgstr ""
+
+#: build/frontend-editor.js:208
+#: build/frontend-editor.js:332
+#: build/frontend-editor.js:199
+#: build/frontend-editor.js:214
+msgid "Move to Trash"
+msgstr ""
+
+#: build/frontend-editor.js:119
+msgid "Submission"
+msgstr ""
+
+#: build/frontend-editor.js:120
+msgid "Include student assignment answer and attach files."
+msgstr ""
+
+#: build/frontend-editor.js:125
+msgid "Answer"
+msgstr ""
+
+#: build/frontend-editor.js:134
+msgid "Attachments"
+msgstr ""
+
+#: build/frontend-editor.js:153
+msgid "No attachments"
+msgstr ""
+
+#: build/frontend-editor.js:160
+msgid "Evaluation"
+msgstr ""
+
+#: build/frontend-editor.js:161
+msgid "Your evaluation about student submission."
+msgstr ""
+
+#: build/frontend-editor.js:166
+#: build/frontend-editor.js:107
+msgid "Mark"
+msgstr ""
+
+#: build/frontend-editor.js:178
+msgid "Max: "
+msgstr ""
+
+#: build/frontend-editor.js:180
+msgid "Passing grade: "
+msgstr ""
+
+#: build/frontend-editor.js:188
+msgid "Mark must be less than or equal to"
+msgstr ""
+
+#: build/frontend-editor.js:191
+msgid "Mark for user answer."
+msgstr ""
+
+#: build/frontend-editor.js:196
+msgid "Instructor note"
+msgstr ""
+
+#: build/frontend-editor.js:209
+msgid "Upload file"
+msgstr ""
+
+#: build/frontend-editor.js:210
+msgid "Upload files for the right answers, reference, etc."
+msgstr ""
+
+#: build/frontend-editor.js:230
+msgid "Re-Evaluate"
+msgstr ""
+
+#: build/frontend-editor.js:260
+#: build/frontend-editor.js:131
+msgid "Evaluate"
+msgstr ""
+
+#: build/frontend-editor.js:272
+#: build/frontend-editor.js:258
+#: build/frontend-editor.js:660
+#: build/frontend-editor.js:211
+#: build/frontend-editor.js:280
+#: build/frontend-editor.js:172
+msgid "Close"
+msgstr ""
+
+#: build/frontend-editor.js:42
+msgid "Error loading data."
+msgstr ""
+
+#: build/frontend-editor.js:51
+msgid "No Assignment available."
+msgstr ""
+
+#: build/frontend-editor.js:66
+#: build/frontend-editor.js:106
+#: build/frontend-editor.js:233
+#: build/frontend-editor.js:226
+#: build/frontend-editor.js:76
+#: build/frontend-editor.js:67
+#: build/frontend-editor.js:149
+#: build/frontend-editor.js:66
+#: build/frontend-editor.js:66
+msgid "Next"
+msgstr ""
+
+#: build/frontend-editor.js:72
+#: build/frontend-editor.js:112
+#: build/frontend-editor.js:226
+#: build/frontend-editor.js:232
+#: build/frontend-editor.js:82
+#: build/frontend-editor.js:73
+#: build/frontend-editor.js:142
+#: build/frontend-editor.js:72
+#: build/frontend-editor.js:72
+msgid "Prev"
+msgstr ""
+
+#: build/frontend-editor.js:91
+#: build/frontend-editor.js:84
+msgid "Assignments"
+msgstr ""
+
+#: build/frontend-editor.js:95
+#: build/frontend-editor.js:157
+#: build/frontend-editor.js:106
+#: build/frontend-editor.js:273
+#: build/frontend-editor.js:355
+#: build/frontend-editor.js:96
+#: build/frontend-editor.js:95
+#: build/frontend-editor.js:95
+msgid "Add new"
+msgstr ""
+
+#: build/frontend-editor.js:112
+#: build/frontend-editor.js:123
+#: build/frontend-editor.js:113
+#: build/frontend-editor.js:112
+#: build/frontend-editor.js:112
+msgid "Search"
+msgstr ""
+
+#: build/frontend-editor.js:82
+msgid "Something went wrong. Please try again later."
+msgstr ""
+
+#: build/frontend-editor.js:91
+msgid "No students found."
+msgstr ""
+
+#: build/frontend-editor.js:152
+msgid "Search student…"
+msgstr ""
+
+#: build/frontend-editor.js:160
+#: build/frontend-editor.js:105
+msgid "Status"
+msgstr ""
+
+#: build/frontend-editor.js:161
+msgid "Evaluated"
+msgstr ""
+
+#: build/frontend-editor.js:162
+msgid "Not evaluate"
+msgstr ""
+
+#: build/frontend-editor.js:168
+#: build/frontend-editor.js:108
+msgid "Result"
+msgstr ""
+
+#: build/frontend-editor.js:169
+msgid "Passed"
+msgstr ""
+
+#: build/frontend-editor.js:170
+msgid "Failed"
+msgstr ""
+
+#: build/frontend-editor.js:176
+msgid "Limit"
+msgstr ""
+
+#: build/frontend-editor.js:188
+msgid "Filter"
+msgstr ""
+
+#: build/frontend-editor.js:30
+#: build/frontend-editor.js:26
+#: build/frontend-editor.js:55
+#: build/frontend-editor.js:218
+#: build/frontend-editor.js:33
+#: build/frontend-editor.js:28
+#: build/frontend-editor.js:28
+msgid "Draft"
+msgstr ""
+
+#: build/frontend-editor.js:35
+#: build/frontend-editor.js:184
+#: build/frontend-editor.js:31
+#: build/frontend-editor.js:60
+#: build/frontend-editor.js:215
+#: build/frontend-editor.js:38
+#: build/frontend-editor.js:233
+#: build/frontend-editor.js:33
+#: build/frontend-editor.js:211
+#: build/frontend-editor.js:33
+#: build/frontend-editor.js:212
+msgid "Trash"
+msgstr ""
+
+#: build/frontend-editor.js:40
+#: build/frontend-editor.js:36
+#: build/frontend-editor.js:65
+#: build/frontend-editor.js:43
+#: build/frontend-editor.js:38
+#: build/frontend-editor.js:38
+msgid "Pending"
+msgstr ""
+
+#: build/frontend-editor.js:82
+#: build/frontend-editor.js:138
+#: build/frontend-editor.js:130
+#: build/frontend-editor.js:130
+msgid "Name"
+msgstr ""
+
+#: build/frontend-editor.js:83
+#: build/frontend-editor.js:139
+#: build/frontend-editor.js:131
+msgid "Course"
+msgstr ""
+
+#: build/frontend-editor.js:84
+msgid "Students"
+msgstr ""
+
+#: build/frontend-editor.js:85
+#: build/frontend-editor.js:140
+#: build/frontend-editor.js:133
+#: build/frontend-editor.js:132
+msgid "Author"
+msgstr ""
+
+#: build/frontend-editor.js:86
+#: build/frontend-editor.js:134
+#: build/frontend-editor.js:134
+msgid "Date"
+msgstr ""
+
+#: build/frontend-editor.js:87
+#: build/frontend-editor.js:109
+msgid "Actions"
+msgstr ""
+
+#: build/frontend-editor.js:138
+#: build/frontend-editor.js:114
+#: build/frontend-editor.js:160
+#: build/frontend-editor.js:204
+#: build/frontend-editor.js:182
+#: build/frontend-editor.js:182
+msgid "Edit"
+msgstr ""
+
+#: build/frontend-editor.js:149
+msgid "View students results"
+msgstr ""
+
+#: build/frontend-editor.js:160
+#: build/frontend-editor.js:186
+#: build/frontend-editor.js:190
+#: build/frontend-editor.js:175
+#: build/frontend-editor.js:208
+#: build/frontend-editor.js:214
+#: build/frontend-editor.js:235
+#: build/frontend-editor.js:253
+#: build/frontend-editor.js:192
+#: build/frontend-editor.js:213
+#: build/frontend-editor.js:192
+#: build/frontend-editor.js:214
+msgid "Delete"
+msgstr ""
+
+#: build/frontend-editor.js:169
+#: build/frontend-editor.js:176
+#: build/frontend-editor.js:282
+#: build/frontend-editor.js:338
+#: build/frontend-editor.js:451
+#: build/frontend-editor.js:188
+#: build/frontend-editor.js:219
+#: build/frontend-editor.js:69
+#: build/frontend-editor.js:258
+#: build/frontend-editor.js:197
+#: build/frontend-editor.js:197
+msgid "Are you sure?"
+msgstr ""
+
+#: build/frontend-editor.js:102
+msgid "ID"
+msgstr ""
+
+#: build/frontend-editor.js:103
+msgid "Student"
+msgstr ""
+
+#: build/frontend-editor.js:104
+msgid "Email"
+msgstr ""
+
+#: build/frontend-editor.js:106
+msgid "Instructor"
+msgstr ""
+
+#: build/frontend-editor.js:156
+msgid "Evalute"
+msgstr ""
+
+#: build/frontend-editor.js:167
+msgid "Delete submission"
+msgstr ""
+
+#: build/frontend-editor.js:213
+msgid "Reset result"
+msgstr ""
+
+#: build/frontend-editor.js:234
+msgid "Send evaluated email"
+msgstr ""
+
+#: build/frontend-editor.js:86
+msgid "Loading…"
+msgstr ""
+
+#: build/frontend-editor.js:106
+#: build/frontend-editor.js:284
+#: build/frontend-editor.js:352
+#: build/frontend-editor.js:463
+#: build/frontend-editor.js:71
+#: build/frontend-editor.js:264
+#: build/frontend-editor.js:217
+msgid "Remove"
+msgstr ""
+
+#: build/frontend-editor.js:110
+msgid "Assign"
+msgstr ""
+
+#: build/frontend-editor.js:141
+msgid "Create new certificate"
+msgstr ""
+
+#: build/frontend-editor.js:33
+#: build/frontend-editor.js:26
+msgid "Data not found"
+msgstr ""
+
+#: build/frontend-editor.js:135
+msgid "Create new %s :"
+msgstr ""
+
+#: build/frontend-editor.js:145
+msgid "Enter %s Title"
+msgstr ""
+
+#: build/frontend-editor.js:162
+msgid "Or search %s in list:"
+msgstr ""
+
+#: build/frontend-editor.js:172
+#: build/frontend-editor.js:88
+msgid "Search…"
+msgstr ""
+
+#: build/frontend-editor.js:252
+#: build/frontend-editor.js:308
+#: build/frontend-editor.js:390
+#: build/frontend-editor.js:207
+#: build/frontend-editor.js:168
+msgid "Add"
+msgstr ""
+
+#: build/frontend-editor.js:39
+#: build/frontend-editor.js:18
+msgid "Dashboard"
+msgstr ""
+
+#: build/frontend-editor.js:61
+msgid "Total Course"
+msgstr ""
+
+#: build/frontend-editor.js:65
+msgid "Active Course"
+msgstr ""
+
+#: build/frontend-editor.js:69
+msgid "Pending Course"
+msgstr ""
+
+#: build/frontend-editor.js:73
+#: build/frontend-editor.js:178
+msgid "Total Student"
+msgstr ""
+
+#: build/frontend-editor.js:77
+msgid "Enrolled Course"
+msgstr ""
+
+#: build/frontend-editor.js:81
+msgid "In-progress Course"
+msgstr ""
+
+#: build/frontend-editor.js:85
+msgid "Finished Course"
+msgstr ""
+
+#: build/frontend-editor.js:89
+msgid "Passed Course"
+msgstr ""
+
+#: build/frontend-editor.js:93
+msgid "Failed Courses"
+msgstr ""
+
+#: build/frontend-editor.js:97
+msgid "Earning"
+msgstr ""
+
+#: build/frontend-editor.js:98
+msgid "Coming soon"
+msgstr ""
+
+#: build/frontend-editor.js:119
+msgid "Select Month"
+msgstr ""
+
+#: build/frontend-editor.js:175
+#: build/frontend-editor.js:27
+msgid "Courses"
+msgstr ""
+
+#: build/frontend-editor.js:220
+msgid "No data"
+msgstr ""
+
+#: build/frontend-editor.js:30
+#: build/frontend-editor.js:30
+#: build/frontend-editor.js:23
+#: build/frontend-editor.js:120
+#: build/frontend-editor.js:25
+#: build/frontend-editor.js:161
+#: build/frontend-editor.js:130
+#: build/frontend-editor.js:150
+msgid "Title"
+msgstr ""
+
+#: build/frontend-editor.js:43
+#: build/frontend-editor.js:43
+#: build/frontend-editor.js:38
+#: build/frontend-editor.js:109
+#: build/frontend-editor.js:133
+#: build/frontend-editor.js:41
+#: build/frontend-editor.js:174
+#: build/frontend-editor.js:148
+#: build/frontend-editor.js:168
+msgid "Description"
+msgstr ""
+
+#: build/frontend-editor.js:63
+#: build/frontend-editor.js:63
+#: build/frontend-editor.js:52
+#: build/frontend-editor.js:154
+#: build/frontend-editor.js:195
+#: build/frontend-editor.js:161
+#: build/frontend-editor.js:188
+msgid "Edit with Classic Editor"
+msgstr ""
+
+#: build/frontend-editor.js:81
+#: build/frontend-editor.js:92
+#: build/frontend-editor.js:81
+#: build/frontend-editor.js:92
+#: build/frontend-editor.js:59
+#: build/frontend-editor.js:117
+#: build/frontend-editor.js:171
+#: build/frontend-editor.js:182
+#: build/frontend-editor.js:213
+#: build/frontend-editor.js:224
+#: build/frontend-editor.js:204
+#: build/frontend-editor.js:219
+msgid "Edit with Elementor"
+msgstr ""
+
+#: build/frontend-editor.js:114
+msgid "Documentations"
+msgstr ""
+
+#: build/frontend-editor.js:121
+msgid "General Settings"
+msgstr ""
+
+#: build/frontend-editor.js:21
+#: build/frontend-editor.js:296
+#: build/frontend-editor.js:148
+#: build/frontend-editor.js:275
+#: build/frontend-editor.js:273
+#: build/frontend-editor.js:252
+#: build/frontend-editor.js:253
+msgid "Publish"
+msgstr ""
+
+#: build/frontend-editor.js:220
+#: build/frontend-editor.js:21
+msgid "General"
+msgstr ""
+
+#: build/frontend-editor.js:225
+#: build/frontend-editor.js:26
+msgid "Curriculum"
+msgstr ""
+
+#: build/frontend-editor.js:230
+#: build/frontend-editor.js:35
+#: build/frontend-editor.js:72
+#: build/frontend-editor.js:31
+#: build/frontend-editor.js:117
+msgid "Settings"
+msgstr ""
+
+#: build/frontend-editor.js:259
+msgid "Edit Course"
+msgstr ""
+
+#: build/frontend-editor.js:293
+#: build/frontend-editor.js:148
+msgid "Submit for Review"
+msgstr ""
+
+#: build/frontend-editor.js:84
+msgid "Details"
+msgstr ""
+
+#: build/frontend-editor.js:134
+msgid "Points"
+msgstr ""
+
+#: build/frontend-editor.js:137
+msgid "Points for choosing the correct answer."
+msgstr ""
+
+#: build/frontend-editor.js:152
+msgid "Hint"
+msgstr ""
+
+#: build/frontend-editor.js:155
+msgid "Instruction for user to select the right answer. The text will be shown when users click the 'Hint' button."
+msgstr ""
+
+#: build/frontend-editor.js:170
+msgid "Explanation"
+msgstr ""
+
+#: build/frontend-editor.js:173
+msgid "Explanation will be displayed when students click button 'Check Answer'."
+msgstr ""
+
+#: build/frontend-editor.js:203
+#: build/frontend-editor.js:63
+#: build/frontend-editor.js:71
+msgid "Questions"
+msgstr ""
+
+#: build/frontend-editor.js:328
+msgid "Enter a new question"
+msgstr ""
+
+#: build/frontend-editor.js:347
+msgid "Add Question"
+msgstr ""
+
+#: build/frontend-editor.js:351
+msgid "Select Questions"
+msgstr ""
+
+#: build/frontend-editor.js:391
+msgid "Quiz Settings"
+msgstr ""
+
+#: build/frontend-editor.js:38
+#: build/frontend-editor.js:192
+#: build/frontend-editor.js:231
+msgid "Logout"
+msgstr ""
+
+#: build/frontend-editor.js:38
+#: build/frontend-editor.js:43
+#: build/frontend-editor.js:42
+#: build/frontend-editor.js:42
+msgid "Error loading Course."
+msgstr ""
+
+#: build/frontend-editor.js:47
+msgid "No Course available."
+msgstr ""
+
+#: build/frontend-editor.js:102
+msgid "List your courses"
+msgstr ""
+
+#: build/frontend-editor.js:36
+msgid "Add course"
+msgstr ""
+
+#: build/frontend-editor.js:45
+msgid "Lessons"
+msgstr ""
+
+#: build/frontend-editor.js:54
+msgid "Quizzes"
+msgstr ""
+
+#: build/frontend-editor.js:164
+msgid "Back to Site"
+msgstr ""
+
+#: build/frontend-editor.js:176
+msgid "More Information"
+msgstr ""
+
+#: build/frontend-editor.js:184
+msgid "Document"
+msgstr ""
+
+#: build/frontend-editor.js:225
+msgid "Are you sure you want to log out?"
+msgstr ""
+
+#: build/frontend-editor.js:228
+#: build/frontend-editor.js:273
+#: build/frontend-editor.js:280
+#: build/frontend-editor.js:362
+#: build/frontend-editor.js:168
+msgid "Cancel"
+msgstr ""
+
+#: build/frontend-editor.js:269
+msgid "Are you sure you want to leave this page?"
+msgstr ""
+
+#: build/frontend-editor.js:276
+msgid "Continue"
+msgstr ""
+
+#: build/frontend-editor.js:261
+msgid "Please save Course before add Section"
+msgstr ""
+
+#: build/frontend-editor.js:489
+msgid "Add new item"
+msgstr ""
+
+#: build/frontend-editor.js:565
+msgid "Enter Section Title"
+msgstr ""
+
+#: build/frontend-editor.js:582
+msgid "Add Section"
+msgstr ""
+
+#: build/frontend-editor.js:623
+msgid "Edit Course Item"
+msgstr ""
+
+#: build/frontend-editor.js:623
+msgid "Edit Section"
+msgstr ""
+
+#: build/frontend-editor.js:105
+msgid "Permalink: "
+msgstr ""
+
+#: build/frontend-editor.js:245
+msgid "Course Categories"
+msgstr ""
+
+#: build/frontend-editor.js:317
+#: build/frontend-editor.js:399
+msgid "This field is required"
+msgstr ""
+
+#: build/frontend-editor.js:317
+msgid "Invalid category name"
+msgstr ""
+
+#: build/frontend-editor.js:327
+msgid "Course Tags"
+msgstr ""
+
+#: build/frontend-editor.js:399
+msgid "Invalid tag name"
+msgstr ""
+
+#: build/frontend-editor.js:409
+msgid "Featured image"
+msgstr ""
+
+#: build/frontend-editor.js:437
+msgid "Upload a file"
+msgstr ""
+
+#: build/frontend-editor.js:442
+msgid "or drag and drop"
+msgstr ""
+
+#: build/frontend-editor.js:444
+msgid "PNG, JPG, JPEG"
+msgstr ""
+
+#: build/frontend-editor.js:168
+msgid "Schedule"
+msgstr ""
+
+#: build/frontend-editor.js:214
+msgid "Setting is not compatible with the current version"
+msgstr ""
+
+#: build/frontend-editor.js:134
+msgid "Add new Course"
+msgstr ""
+
+#: build/frontend-editor.js:166
+msgid "View"
+msgstr ""
+
+#: build/frontend-editor.js:204
+msgid "Restore"
+msgstr ""
+
+#: build/frontend-editor.js:16
+msgid "Minute(s)"
+msgstr ""
+
+#: build/frontend-editor.js:20
+msgid "Hour(s)"
+msgstr ""
+
+#: build/frontend-editor.js:24
+msgid "Day(s)"
+msgstr ""
+
+#: build/frontend-editor.js:28
+msgid "Week(s)"
+msgstr ""
+
+#: build/frontend-editor.js:116
+msgid "Label"
+msgstr ""
+
+#: build/frontend-editor.js:128
+msgid "Content"
+msgstr ""
+
+#: build/frontend-editor.js:149
+#: build/frontend-editor.js:129
+msgid "Add more"
+msgstr ""
+
+#: build/frontend-editor.js:155
+msgid "Add media"
+msgstr ""
+
+#: build/frontend-editor.js:24
+msgid "Select options"
+msgstr ""
+
+#: build/frontend-editor.js:115
+msgid "Enter the new title"
+msgstr ""
+
+#: build/frontend-editor.js:71
+#: build/frontend-editor.js:86
+#: inc/class-rest-api.php:2272
+msgid "Update lesson successfully"
+msgstr ""
+
+#: build/frontend-editor.js:77
+#: build/frontend-editor.js:91
+msgid "Update lesson failed"
+msgstr ""
+
+#: build/frontend-editor.js:119
+msgid "Add Lesson"
+msgstr ""
+
+#: build/frontend-editor.js:139
+msgid "Edit Lesson"
+msgstr ""
+
+#: build/frontend-editor.js:52
+msgid "No Lesson available."
+msgstr ""
+
+#: build/frontend-editor.js:92
+msgid "List your lessons"
+msgstr ""
+
+#: build/frontend-editor.js:141
+msgid "Preview"
+msgstr ""
+
+#: build/frontend-editor.js:142
+msgid "Date modified"
+msgstr ""
+
+#: build/frontend-editor.js:290
+#: build/frontend-editor.js:269
+#: build/frontend-editor.js:270
+msgid "Duplicate"
+msgstr ""
+
+#: build/frontend-editor.js:106
+msgid "Add new Question"
+msgstr ""
+
+#: build/frontend-editor.js:101
+msgid "No questions found"
+msgstr ""
+
+#: build/frontend-editor.js:15
+msgid "Answers"
+msgstr ""
+
+#: build/frontend-editor.js:16
+msgid "Correction"
+msgstr ""
+
+#: build/frontend-editor.js:104
+msgid "Add option"
+msgstr ""
+
+#: build/frontend-editor.js:209
+msgid "Select a word in passage above and click 'Insert new blank' to make that word is a blank for filling."
+msgstr ""
+
+#: build/frontend-editor.js:216
+msgid "Insert new blank"
+msgstr ""
+
+#: build/frontend-editor.js:223
+msgid "Clear all blanks"
+msgstr ""
+
+#: build/frontend-editor.js:230
+msgid "Clear content"
+msgstr ""
+
+#: build/frontend-editor.js:247
+msgid "Option"
+msgstr ""
+
+#: build/frontend-editor.js:290
+msgid "Match case"
+msgstr ""
+
+#: build/frontend-editor.js:291
+msgid "Match two words in case sensitive."
+msgstr ""
+
+#: build/frontend-editor.js:295
+msgid "Comparison"
+msgstr ""
+
+#: build/frontend-editor.js:305
+msgid "Equal"
+msgstr ""
+
+#: build/frontend-editor.js:306
+msgid "Match two words are equality."
+msgstr ""
+
+#: build/frontend-editor.js:319
+msgid "Range"
+msgstr ""
+
+#: build/frontend-editor.js:333
+msgid "Any"
+msgstr ""
+
+#: build/frontend-editor.js:151
+msgid "Edit Question"
+msgstr ""
+
+#: build/frontend-editor.js:51
+msgid "No Question available."
+msgstr ""
+
+#: build/frontend-editor.js:91
+msgid "List your Questions"
+msgstr ""
+
+#: build/frontend-editor.js:131
+msgid "Quiz"
+msgstr ""
+
+#: build/frontend-editor.js:132
+msgid "Type"
+msgstr ""
+
+#: build/frontend-editor.js:119
+msgid "Add new Quiz"
+msgstr ""
+
+#: build/frontend-editor.js:166
+msgid "Edit Quiz"
+msgstr ""
+
+#: build/frontend-editor.js:51
+msgid "No Quiz available."
+msgstr ""
+
+#: build/frontend-editor.js:91
+msgid "List your Quizzes"
+msgstr ""
+
+#: build/frontend-editor.js:133
+msgid "Duration"
+msgstr ""
+
+#: build/frontend-editor.js:69
+msgid "Image size must be equal to %1$sx%2$spx"
+msgstr ""
+
+#: build/frontend-editor.js:121
+msgid "First name"
+msgstr ""
+
+#: build/frontend-editor.js:138
+msgid "Last name"
+msgstr ""
+
+#: build/frontend-editor.js:154
+msgid "Display name*"
+msgstr ""
+
+#: build/frontend-editor.js:170
+msgid "Email address*"
+msgstr ""
+
+#: build/frontend-editor.js:186
+msgid "Avatar"
+msgstr ""
+
+#: build/frontend-editor.js:206
+msgid "Change"
+msgstr ""
+
+#: build/frontend-editor.js:230
+msgid "Upload"
+msgstr ""
+
+#: build/frontend-editor.js:233
+msgid "Upload image size %1$sx%2$spx pixels."
+msgstr ""
+
+#: build/frontend-editor.js:248
+msgid "Biographical Info"
+msgstr ""
+
+#: build/frontend-editor.js:264
+msgid "New Password"
+msgstr ""
+
+#: build/frontend-editor.js:293
+msgid "Hide"
+msgstr ""
+
+#: build/frontend-editor.js:293
+msgid "Show"
+msgstr ""
+
+#: build/frontend-editor.js:350
+msgid "Facebook"
+msgstr ""
+
+#: build/frontend-editor.js:367
+msgid "Twitter"
+msgstr ""
+
+#: build/frontend-editor.js:384
+msgid "Youtube"
+msgstr ""
+
+#: build/frontend-editor.js:401
+msgid "Linkedin"
+msgstr ""
+
+#: build/frontend-editor.js:187
+msgid "Classic"
+msgstr ""
+
+#. Plugin Name of the plugin
+msgid "LearnPress - Frontend Editor"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "http://thimpress.com/learnpress"
+msgstr ""
+
+#. Description of the plugin
+msgid "Create your course in frontend."
+msgstr ""
+
+#. Author of the plugin
+msgid "ThimPress"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://thimpress.com"
+msgstr ""
+
+#: inc/class-rest-api.php:511
+msgid "Course ID is required"
+msgstr ""
+
+#: inc/class-rest-api.php:521
+#: inc/class-rest-api.php:1805
+msgid "You are not allowed to update this assignment"
+msgstr ""
+
+#: inc/class-rest-api.php:566
+msgid "Title is required"
+msgstr ""
+
+#: inc/class-rest-api.php:678
+msgid "Invalid type"
+msgstr ""
+
+#: inc/class-rest-api.php:715
+#: inc/class-rest-api.php:1051
+#: inc/class-rest-api.php:1095
+#: inc/class-rest-api.php:2992
+msgid "Instructor not found"
+msgstr ""
+
+#: inc/class-rest-api.php:753
+msgid "Post not found"
+msgstr ""
+
+#: inc/class-rest-api.php:757
+#: inc/class-rest-api.php:799
+msgid "You are not allowed to duplicate this item"
+msgstr ""
+
+#: inc/class-rest-api.php:766
+msgid "Post updated"
+msgstr ""
+
+#: inc/class-rest-api.php:795
+msgid "Item not found"
+msgstr ""
+
+#: inc/class-rest-api.php:851
+msgid "Item duplicated successfully"
+msgstr ""
+
+#: inc/class-rest-api.php:972
+msgid "Enrolled"
+msgstr ""
+
+#: inc/class-rest-api.php:973
+msgid "Finished"
+msgstr ""
+
+#: inc/class-rest-api.php:1176
+msgid "Profile updated"
+msgstr ""
+
+#: inc/class-rest-api.php:1189
+#: inc/class-rest-api.php:1244
+#: inc/class-rest-api.php:1305
+#: inc/class-rest-api.php:1497
+msgid "Question not found"
+msgstr ""
+
+#: inc/class-rest-api.php:1193
+#: inc/class-rest-api.php:1309
+#: inc/class-rest-api.php:1501
+msgid "You are not allowed to delete this question"
+msgstr ""
+
+#: inc/class-rest-api.php:1206
+msgid "Cannot move this question to trash"
+msgstr ""
+
+#: inc/class-rest-api.php:1213
+msgid "Delete this question successfully"
+msgstr ""
+
+#: inc/class-rest-api.php:1213
+msgid "This question has been moved to trash."
+msgstr ""
+
+#: inc/class-rest-api.php:1253
+msgid "You are not allowed to move this question"
+msgstr ""
+
+#: inc/class-rest-api.php:1264
+#: inc/class-rest-api.php:1580
+#: inc/class-rest-api.php:1622
+msgid "Cannot move to trash"
+msgstr ""
+
+#: inc/class-rest-api.php:1272
+#: inc/class-rest-api.php:1588
+msgid "Quiz moved to trash"
+msgstr ""
+
+#: inc/class-rest-api.php:1408
+msgid "Question created"
+msgstr ""
+
+#: inc/class-rest-api.php:1408
+msgid "Question updated"
+msgstr ""
+
+#: inc/class-rest-api.php:1560
+#: inc/class-rest-api.php:1872
+#: inc/class-rest-api.php:1947
+msgid "Quiz not found"
+msgstr ""
+
+#: inc/class-rest-api.php:1569
+#: inc/class-rest-api.php:1611
+msgid "You are not allowed to move this quiz"
+msgstr ""
+
+#: inc/class-rest-api.php:1602
+#: inc/class-rest-api.php:1732
+#: inc/class-rest-api.php:1795
+msgid "Assignment not found"
+msgstr ""
+
+#: inc/class-rest-api.php:1630
+msgid "Assignment moved to trash"
+msgstr ""
+
+#: inc/class-rest-api.php:1640
+msgid "Assignment addon is not active"
+msgstr ""
+
+#: inc/class-rest-api.php:1736
+msgid "You are not allowed to delete this assignment"
+msgstr ""
+
+#: inc/class-rest-api.php:1749
+msgid "Cannot move this assignment to trash"
+msgstr ""
+
+#: inc/class-rest-api.php:1756
+msgid "Delete this assignment successfully"
+msgstr ""
+
+#: inc/class-rest-api.php:1756
+msgid "This assignment has been moved to trash."
+msgstr ""
+
+#: inc/class-rest-api.php:1833
+msgid "Assignment created"
+msgstr ""
+
+#: inc/class-rest-api.php:1833
+msgid "Assignment updated"
+msgstr ""
+
+#: inc/class-rest-api.php:1882
+msgid "You are not allowed to update this quiz"
+msgstr ""
+
+#: inc/class-rest-api.php:1913
+msgid "Quiz created"
+msgstr ""
+
+#: inc/class-rest-api.php:1913
+msgid "Quiz updated"
+msgstr ""
+
+#: inc/class-rest-api.php:1951
+msgid "You are not allowed to delete this quiz"
+msgstr ""
+
+#: inc/class-rest-api.php:1964
+msgid "Cannot move this quiz to trash"
+msgstr ""
+
+#: inc/class-rest-api.php:1971
+msgid "Delete this quiz successfully"
+msgstr ""
+
+#: inc/class-rest-api.php:1971
+msgid "This quiz has been moved to trash."
+msgstr ""
+
+#: inc/class-rest-api.php:2057
+#: inc/class-rest-api.php:2164
+#: inc/class-rest-api.php:2170
+#: inc/class-rest-api.php:2228
+msgid "Lesson not found"
+msgstr ""
+
+#: inc/class-rest-api.php:2061
+msgid "You are not allowed to delete this lesson"
+msgstr ""
+
+#: inc/class-rest-api.php:2074
+msgid "Cannot move this lesson to trash"
+msgstr ""
+
+#: inc/class-rest-api.php:2081
+msgid "Delete this lesson successfully"
+msgstr ""
+
+#: inc/class-rest-api.php:2081
+msgid "This lesson has been moved to trash."
+msgstr ""
+
+#: inc/class-rest-api.php:2238
+msgid "You are not allowed to update this lesson"
+msgstr ""
+
+#: inc/class-rest-api.php:2272
+msgid "Insert lesson successfully"
+msgstr ""
+
+#: inc/class-rest-api.php:2324
+#: inc/class-rest-api.php:2352
+#: inc/class-rest-api.php:2390
+#: inc/class-rest-api.php:2713
+#: inc/class-rest-api.php:3098
+#: inc/class-rest-api.php:3104
+#: inc/class-rest-api.php:3110
+msgid "Course not found"
+msgstr ""
+
+#: inc/class-rest-api.php:2360
+msgid "You are not allowed to update this course"
+msgstr ""
+
+#: inc/class-rest-api.php:2721
+#: inc/class-rest-api.php:2726
+msgid "You are not allowed to delete this course"
+msgstr ""
+
+#: inc/class-rest-api.php:2731
+msgid "Course has been deleted"
+msgstr ""
+
+#: inc/class-rest-api.php:2742
+msgid "Course cannot be moved to draft"
+msgstr ""
+
+#: inc/class-rest-api.php:2745
+msgid "Course has been moved to draft"
+msgstr ""
+
+#: inc/class-rest-api.php:2750
+msgid "Error when move course to trash"
+msgstr ""
+
+#: inc/class-rest-api.php:2753
+msgid "Course moved to trash"
+msgstr ""
+
+#: inc/class-rest-api.php:2779
+#: inc/class-rest-api.php:2809
+msgid "Missing params"
+msgstr ""
+
+#: inc/class-rest-api.php:2796
+msgid "Add items successfully"
+msgstr ""
+
+#: inc/class-rest-api.php:2850
+msgid "Add questions successfully"
+msgstr ""
+
+#: inc/class-rest-api.php:3118
+msgid "You are not allowed to edit this course"
+msgstr ""
+
+#: inc/class-rest-api.php:3225
+#: inc/class-rest-api.php:3231
+msgid "User not found"
+msgstr ""
+
+#: inc/class-settings.php:5
+#: inc/class-settings.php:14
+msgid "Frontend Editor"
+msgstr ""
+
+#: inc/class-settings.php:17
+msgid "Page Slug"
+msgstr ""
+
+#: inc/load.php:70
+msgid "LearnPress Frontend Editor"
+msgstr ""
+
+#: inc/load.php:74
+msgid "Edit with LearnPress Frontend Editor"
+msgstr ""

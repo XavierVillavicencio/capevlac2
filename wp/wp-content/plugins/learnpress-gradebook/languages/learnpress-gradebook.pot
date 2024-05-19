@@ -1,0 +1,346 @@
+# Copyright (C) 2022 ThimPress
+# This file is distributed under the same license as the LearnPress - Gradebook plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: LearnPress - Gradebook 4.0.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/learnpress-gradebook\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-08-05T06:30:45+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: learnpress-gradebook\n"
+
+#. Plugin Name of the plugin
+msgid "LearnPress - Gradebook"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "http://thimpress.com/learnpress"
+msgstr ""
+
+#. Description of the plugin
+msgid "Manage gradebook for user."
+msgstr ""
+
+#. Author of the plugin
+msgid "ThimPress"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://thimpress.com"
+msgstr ""
+
+#: inc/class-database.php:299
+#: inc/class-database.php:327
+msgid "Enrolled"
+msgstr ""
+
+#: inc/class-database.php:304
+#: inc/class-database.php:327
+msgid "Finished"
+msgstr ""
+
+#: inc/class-rest-controller.php:148
+#: inc/class-rest-controller.php:202
+#: inc/class-rest-controller.php:268
+#: inc/class-rest-controller.php:379
+#: inc/class-rest-controller.php:415
+msgid "No Course ID param."
+msgstr ""
+
+#: inc/class-rest-controller.php:272
+#: inc/class-rest-controller.php:443
+#: inc/class-rest-controller.php:541
+#: build/min/gradebook.js:108
+msgid "Started"
+msgstr ""
+
+#: inc/class-rest-controller.php:273
+#: inc/class-rest-controller.php:444
+#: inc/class-rest-controller.php:542
+#: build/min/gradebook.js:109
+msgid "Completed"
+msgstr ""
+
+#: inc/class-rest-controller.php:274
+#: inc/class-rest-controller.php:445
+#: inc/class-rest-controller.php:543
+#: build/min/gradebook.js:91
+msgid "In Progress"
+msgstr ""
+
+#: inc/class-rest-controller.php:275
+#: inc/class-rest-controller.php:446
+#: inc/class-rest-controller.php:544
+msgid "Evaluated"
+msgstr ""
+
+#: inc/class-rest-controller.php:447
+msgid "Viewed"
+msgstr ""
+
+#: inc/class-rest-controller.php:455
+#: inc/class-rest-controller.php:549
+#: inc/class-rest-controller.php:606
+#: inc/class-rest-controller.php:703
+#: inc/class-rest-controller.php:743
+#: inc/class-rest-controller.php:795
+msgid "No params invalid"
+msgstr ""
+
+#: inc/class-rest-controller.php:664
+#: inc/class-rest-controller.php:668
+#: inc/class-rest-controller.php:751
+#: inc/class-rest-controller.php:834
+#: inc/class-rest-controller.php:838
+msgid "False"
+msgstr ""
+
+#: inc/class-rest-controller.php:664
+#: inc/class-rest-controller.php:668
+#: inc/class-rest-controller.php:751
+#: inc/class-rest-controller.php:834
+#: inc/class-rest-controller.php:838
+msgid "True"
+msgstr ""
+
+#: inc/class-rest-controller.php:746
+msgid "Quiz is in-progress"
+msgstr ""
+
+#: inc/load.php:88
+msgid "Course Gradebook"
+msgstr ""
+
+#: inc/load.php:113
+#: inc/load.php:156
+msgid "Gradebook"
+msgstr ""
+
+#: inc/load.php:136
+#: build/min/gradebook.js:99
+msgid "View"
+msgstr ""
+
+#: inc/load.php:173
+msgid "Go to Gradebook"
+msgstr ""
+
+#: build/min/gradebook.js:39
+msgid "Back"
+msgstr ""
+
+#: build/min/gradebook.js:57
+msgid "Total students enrolled:"
+msgstr ""
+
+#: build/min/gradebook.js:58
+msgid "Total students finished:"
+msgstr ""
+
+#: build/min/gradebook.js:59
+msgid "Total:"
+msgstr ""
+
+#: build/min/gradebook.js:63
+msgid "Chart 2:"
+msgstr ""
+
+#: build/min/gradebook.js:64
+msgid "All students registered and finished the course"
+msgstr ""
+
+#: build/min/gradebook.js:60
+msgid "Chart:"
+msgstr ""
+
+#: build/min/gradebook.js:61
+msgid "Total number of true and false questions's quiz"
+msgstr ""
+
+#: build/min/gradebook.js:66
+#: build/min/gradebook.js:84
+#: build/min/gradebook.js:81
+#: build/min/gradebook.js:53
+#: build/min/gradebook.js:152
+msgid "No data available"
+msgstr ""
+
+#: build/min/gradebook.js:9
+msgid "Last 7 days"
+msgstr ""
+
+#: build/min/gradebook.js:10
+msgid "Last 30 days"
+msgstr ""
+
+#: build/min/gradebook.js:11
+msgid "Last 12 months"
+msgstr ""
+
+#: build/min/gradebook.js:102
+msgid "Chart 1:"
+msgstr ""
+
+#: build/min/gradebook.js:103
+msgid "Number of students registered and finished the course by date"
+msgstr ""
+
+#: build/min/gradebook.js:16
+#: build/min/gradebook.js:18
+#: build/min/gradebook.js:67
+msgid "Title"
+msgstr ""
+
+#: build/min/gradebook.js:17
+#: build/min/gradebook.js:12
+#: build/min/gradebook.js:68
+#: build/min/gradebook.js:19
+#: build/min/gradebook.js:68
+msgid "Type"
+msgstr ""
+
+#: build/min/gradebook.js:18
+#: build/min/gradebook.js:14
+#: build/min/gradebook.js:23
+#: build/min/gradebook.js:20
+#: build/min/gradebook.js:20
+msgid "Start time"
+msgstr ""
+
+#: build/min/gradebook.js:19
+#: build/min/gradebook.js:24
+#: build/min/gradebook.js:21
+msgid "End time"
+msgstr ""
+
+#: build/min/gradebook.js:20
+#: build/min/gradebook.js:22
+msgid "Graduation"
+msgstr ""
+
+#: build/min/gradebook.js:21
+#: build/min/gradebook.js:15
+#: build/min/gradebook.js:25
+#: build/min/gradebook.js:88
+#: build/min/gradebook.js:22
+#: build/min/gradebook.js:107
+#: build/min/gradebook.js:23
+msgid "Status"
+msgstr ""
+
+#: build/min/gradebook.js:57
+#: build/min/gradebook.js:48
+#: build/min/gradebook.js:112
+msgid "Export CSV"
+msgstr ""
+
+#: build/min/gradebook.js:13
+msgid "Retake"
+msgstr ""
+
+#: build/min/gradebook.js:14
+#: build/min/gradebook.js:69
+msgid "Correct"
+msgstr ""
+
+#: build/min/gradebook.js:15
+msgid "Retake detail"
+msgstr ""
+
+#: build/min/gradebook.js:11
+#: build/min/gradebook.js:20
+msgid "User ID"
+msgstr ""
+
+#: build/min/gradebook.js:12
+#: build/min/gradebook.js:21
+msgid "Username"
+msgstr ""
+
+#: build/min/gradebook.js:13
+#: build/min/gradebook.js:22
+#: build/min/gradebook.js:19
+msgid "Email"
+msgstr ""
+
+#: build/min/gradebook.js:16
+#: build/min/gradebook.js:26
+#: build/min/gradebook.js:21
+msgid "Average"
+msgstr ""
+
+#: build/min/gradebook.js:122
+msgid "Export Full CSV"
+msgstr ""
+
+#: build/min/gradebook.js:73
+msgid "Search student…"
+msgstr ""
+
+#: build/min/gradebook.js:89
+msgid "Passed"
+msgstr ""
+
+#: build/min/gradebook.js:90
+msgid "Failed"
+msgstr ""
+
+#: build/min/gradebook.js:100
+#: build/min/gradebook.js:118
+msgid "Filters"
+msgstr ""
+
+#: build/min/gradebook.js:34
+#: build/min/gradebook.js:39
+msgid "View Chart"
+msgstr ""
+
+#: build/min/gradebook.js:34
+#: build/min/gradebook.js:39
+msgid "Close Chart"
+msgstr ""
+
+#: build/min/gradebook.js:18
+msgid "Student"
+msgstr ""
+
+#: build/min/gradebook.js:92
+msgid "Search lesson, quiz…"
+msgstr ""
+
+#: build/min/gradebook.js:43
+msgid "Result Quiz"
+msgstr ""
+
+#: build/min/gradebook.js:44
+msgid "Date finish:"
+msgstr ""
+
+#: build/min/gradebook.js:45
+msgid "Questions:"
+msgstr ""
+
+#: build/min/gradebook.js:46
+msgid "Time spent:"
+msgstr ""
+
+#: build/min/gradebook.js:47
+msgid "Marks:"
+msgstr ""
+
+#: build/min/gradebook.js:48
+msgid "Passing grade:"
+msgstr ""
+
+#: build/min/gradebook.js:49
+msgid "Result:"
+msgstr ""
+
+#: build/min/gradebook.js:70
+msgid "Retake Detail"
+msgstr ""

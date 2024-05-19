@@ -1,0 +1,208 @@
+{
+   "domain": "learnpress-gradebook",
+   "locale_data": {
+      "learnpress-gradebook": {
+         "": {
+            "domain": "learnpress-gradebook"
+         },
+         "LearnPress - Gradebook": [
+            ""
+         ],
+         "http://thimpress.com/learnpress": [
+            ""
+         ],
+         "Manage gradebook for user.": [
+            ""
+         ],
+         "ThimPress": [
+            ""
+         ],
+         "http://thimpress.com": [
+            ""
+         ],
+         "Enrolled": [
+            ""
+         ],
+         "Finished": [
+            ""
+         ],
+         "No Course ID param.": [
+            ""
+         ],
+         "Started": [
+            ""
+         ],
+         "Completed": [
+            ""
+         ],
+         "In Progress": [
+            ""
+         ],
+         "Evaluated": [
+            ""
+         ],
+         "Viewed": [
+            ""
+         ],
+         "No params invalid": [
+            ""
+         ],
+         "False": [
+            ""
+         ],
+         "True": [
+            ""
+         ],
+         "Quiz is in-progress": [
+            ""
+         ],
+         "Course Gradebook": [
+            ""
+         ],
+         "Gradebook": [
+            ""
+         ],
+         "View": [
+            ""
+         ],
+         "Go to Gradebook": [
+            ""
+         ],
+         "Back": [
+            ""
+         ],
+         "Total students enrolled:": [
+            ""
+         ],
+         "Total students finished:": [
+            ""
+         ],
+         "Total:": [
+            ""
+         ],
+         "Chart 2:": [
+            ""
+         ],
+         "All students registered and finished the course": [
+            ""
+         ],
+         "Chart:": [
+            ""
+         ],
+         "Total number of true and false questions's quiz": [
+            ""
+         ],
+         "No data available": [
+            ""
+         ],
+         "Last 7 days": [
+            ""
+         ],
+         "Last 30 days": [
+            ""
+         ],
+         "Last 12 months": [
+            ""
+         ],
+         "Chart 1:": [
+            ""
+         ],
+         "Number of students registered and finished the course by date": [
+            ""
+         ],
+         "Title": [
+            ""
+         ],
+         "Type": [
+            ""
+         ],
+         "Start time": [
+            ""
+         ],
+         "End time": [
+            ""
+         ],
+         "Graduation": [
+            ""
+         ],
+         "Status": [
+            ""
+         ],
+         "Export CSV": [
+            ""
+         ],
+         "Retake": [
+            ""
+         ],
+         "Correct": [
+            ""
+         ],
+         "Retake detail": [
+            ""
+         ],
+         "User ID": [
+            ""
+         ],
+         "Username": [
+            ""
+         ],
+         "Email": [
+            ""
+         ],
+         "Average": [
+            ""
+         ],
+         "Export Full CSV": [
+            ""
+         ],
+         "Search student…": [
+            ""
+         ],
+         "Passed": [
+            ""
+         ],
+         "Failed": [
+            ""
+         ],
+         "Filters": [
+            ""
+         ],
+         "View Chart": [
+            ""
+         ],
+         "Close Chart": [
+            ""
+         ],
+         "Student": [
+            ""
+         ],
+         "Search lesson, quiz…": [
+            ""
+         ],
+         "Result Quiz": [
+            ""
+         ],
+         "Date finish:": [
+            ""
+         ],
+         "Questions:": [
+            ""
+         ],
+         "Time spent:": [
+            ""
+         ],
+         "Marks:": [
+            ""
+         ],
+         "Passing grade:": [
+            ""
+         ],
+         "Result:": [
+            ""
+         ],
+         "Retake Detail": [
+            ""
+         ]
+      }
+   }
+}
