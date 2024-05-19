@@ -3,6 +3,7 @@ FROM mariadb:10.6.4-focal
 WORKDIR /
 RUN mkdir mysql
 COPY 000-startup.sql /mysql/000-startup.sql
+COPY 001-dump.sql /mysql/001-dump.sql
 COPY 004-finish.sql /mysql/004-finish.sql
 # RUN /mysql/setup.sh
 # RUN gunzip /mysql/001-struct.sql.gz
