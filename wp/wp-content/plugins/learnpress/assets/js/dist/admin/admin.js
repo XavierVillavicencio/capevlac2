@@ -42,18 +42,19 @@ var __webpack_exports__ = {};
       }
     });
   };
-  const hideUpgradeMessage = function hideUpgradeMessage(e) {
-    e.preventDefault();
-    const $btn = $(this);
-    $btn.closest('.lp-upgrade-notice').fadeOut();
-    $.post({
-      url: '',
-      data: {
-        'lp-hide-upgrade-message': 'yes'
-      },
-      success: function success(res) {}
-    });
-  };
+
+  /*const hideUpgradeMessage = function hideUpgradeMessage( e ) {
+  	e.preventDefault();
+  	const $btn = $( this );
+  	$btn.closest( '.lp-upgrade-notice' ).fadeOut();
+  	$.post( {
+  		url: '',
+  		data: {
+  			'lp-hide-upgrade-message': 'yes',
+  		},
+  		success: function success( res ) {},
+  	} );
+  };*/
 
   /*const pluginActions = function pluginActions( e ) {
   	// Premium addon
@@ -85,10 +86,11 @@ var __webpack_exports__ = {};
   	} );
   };*/
 
-  const preventDefault = function preventDefault(e) {
-    e.preventDefault();
-    return false;
-  };
+  /*const preventDefault = function preventDefault( e ) {
+  	e.preventDefault();
+  	return false;
+  };*/
+
   $.fn._filter_post_by_author = function () {
     const $input = $('#post-search-input');
     if (!$input.length) {
@@ -255,9 +257,11 @@ var __webpack_exports__ = {};
     //$( '.learn-press-toggle-item-preview' ).on( 'change', updateItemPreview );
     $('.learn-press-tip').LP('QuickTip'); //$('.learn-press-tabs').LP('AdminTab');
 
-    $(document).on('click', '#learn-press-create-pages', createPages).on('click', '.lp-upgrade-notice .close-notice', hideUpgradeMessage)
+    $(document).on('click', '#learn-press-create-pages', createPages)
+    //.on( 'click', '.lp-upgrade-notice .close-notice', hideUpgradeMessage )
     //.on( 'click', '.plugin-action-buttons a', pluginActions )
-    .on('click', '[data-remove-confirm]', preventDefault).on('mousedown', '.lp-sortable-handle', function (e) {
+    //.on( 'click', '[data-remove-confirm]', preventDefault )
+    .on('mousedown', '.lp-sortable-handle', function (e) {
       $('html, body').addClass('lp-item-moving');
       $(e.target).closest('.lp-sortable-handle').css('cursor', 'inherit');
     }).on('mouseup', function (e) {

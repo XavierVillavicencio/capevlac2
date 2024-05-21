@@ -52,6 +52,9 @@ class LP_Admin_Assets extends LP_Abstract_Assets {
 				'nonce'             => wp_create_nonce( 'wp_rest' ),
 				'courses_url'       => learn_press_get_page_link( 'courses' ),
 				'urlParams'         => lp_archive_skeleton_get_args(),
+				'i18n'              => [
+					'select_page' => esc_html__( 'Select page', 'learnpress' ),
+				],
 			]
 		);
 	}
@@ -103,10 +106,10 @@ class LP_Admin_Assets extends LP_Abstract_Assets {
 	protected function _get_scripts(): array {
 		$lp_admin_js = new LP_Asset_Key(
 			$this->url( 'js/dist/admin/admin' . self::$_min_assets . '.js' ),
-			array( 'learn-press-global', 'lp-utils', 'wp-color-picker', 'vue-libs', 'wp-i18n' ),
-			array(),
+			[ 'wp-i18n' ],
+			[],
 			0,
-			1,
+			0,
 			'',
 			[ 'strategy' => 'defer' ]
 		);
@@ -248,7 +251,7 @@ class LP_Admin_Assets extends LP_Abstract_Assets {
 				),*/
 				'lp-advertisement'                  => new LP_Asset_Key(
 					$this->url( self::$_folder_source . 'js/admin/share/advertisement' . self::$_min_assets . '.js' ),
-					array(),
+					[ 'lp-utils' ],
 					array(
 						'edit-' . LP_COURSE_CPT,
 						'edit-' . LP_QUESTION_CPT,
@@ -382,9 +385,9 @@ class LP_Admin_Assets extends LP_Abstract_Assets {
 				'select2'               => new LP_Asset_Key(
 					$this->url( 'src/css/vendor/select2.min.css' )
 				),
-				'font-awesome'          => new LP_Asset_Key(
+				/*'font-awesome'          => new LP_Asset_Key(
 					$this->url( 'src/css/vendor/font-awesome-5.min.css' )
-				),
+				),*/
 				'jquery-ui'             => new LP_Asset_Key(
 					$this->url( 'src/css/vendor/jquery-ui/jquery-ui.min.css' )
 				),
@@ -402,7 +405,7 @@ class LP_Admin_Assets extends LP_Abstract_Assets {
 						'select2',
 						'jquery-ui',
 						'jquery-ui-timepicker',
-						'font-awesome',
+//						'font-awesome',
 						'jquery-tipsy',
 					),
 					array(),

@@ -54,89 +54,19 @@
   margin: 24px auto !important;
   padding: 10px 50px 10px 15px;
   border-top: 5px solid #00adff;
-  border-radius: 0 0 5px 5px;
+  border-radius: var(--lp-border-radius);
   background: #f5f5f5;
   width: 100%;
-}
-.learn-press-message.icon {
-  padding-left: 45px;
-}
-.learn-press-message.icon::before {
-  background: #00adff;
-}
-.learn-press-message.icon::after {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  width: 10px;
-  height: 10px;
-  margin-top: -13px;
-  margin-right: 10px;
-  border-radius: 50%;
-  color: #fff;
-  background: #00adff;
-  font-family: "Font Awesome 5 Free";
-  font-size: 20px;
-  line-height: 1.6em;
-  text-align: center;
-  vertical-align: baseline;
-  content: "\f129";
-}
-.learn-press-message::before, .learn-press-message::after {
-  position: absolute;
-  top: 0;
-  content: "";
-}
-.learn-press-message::before {
-  right: 20px;
-  width: 20px;
-  height: 30px;
-  background: #00adff;
-}
-.learn-press-message::after {
-  top: 10px;
-  right: 20px;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-bottom-color: #f5f5f5;
 }
 .learn-press-message.error {
   border-color: #d85554;
 }
-.learn-press-message.error::before {
-  background: #d85554;
-}
-.learn-press-message.error.icon::before, .learn-press-message.error.icon::after {
-  background: #d85554;
-}
-.learn-press-message.error.icon::after {
-  content: "\f00d";
-}
 .learn-press-message.warning {
   border-color: #ffc107;
-}
-.learn-press-message.warning::before {
-  background: #ffc107;
-}
-.learn-press-message.warning.icon::before, .learn-press-message.warning.icon::after {
-  background: #ffc107;
-}
-.learn-press-message.warning.icon::after {
-  content: "\f00d";
 }
 .learn-press-message.success {
   border-color: #059601;
   margin: 24px auto !important;
-}
-.learn-press-message.success::before {
-  background: #059601;
-}
-.learn-press-message.success.icon::before, .learn-press-message.success.icon::after {
-  background: #059601;
-}
-.learn-press-message.success.icon::after {
-  content: "\f129";
 }
 .learn-press-message a {
   text-decoration: underline;
@@ -520,7 +450,7 @@
 .advanced-list {
   padding: 5px 0 0 8px;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: var(--lp-border-radius);
   background: #fff;
   list-style: none;
 }
@@ -529,9 +459,7 @@
   margin: 0 5px 5px -3px;
   padding: 3px 8px;
   background: #eee;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  border-radius: var(--lp-border-radius);
 }
 .advanced-list li .remove-item {
   display: inline-block;
@@ -612,7 +540,7 @@ ul .clearfix {
 .lp-button {
   padding: 8px 16px;
   border: 1px solid #e5e7eb;
-  border-radius: 6px;
+  border-radius: var(--lp-border-radius);
   color: #374151;
   font-size: 0.9em;
   font-weight: 500;
@@ -3990,10 +3918,6 @@ input[name=_lp_course_result]:checked ~ #passing-condition-quiz-result {
   display: none;
 }
 
-.lp-upgrade-message .learn-press-message::before, .lp-upgrade-message .learn-press-message::after {
-  content: none;
-}
-
 .lp-modal-footer .learn-press-notice {
   color: #ff6060;
   font-weight: 500;
@@ -6014,7 +5938,7 @@ body.lp-item-moving {
   display: inline-block;
 }
 .learn-press-tip::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "lp-icon";
   content: "\f059";
 }
 .learn-press-tip:hover {
@@ -6056,7 +5980,7 @@ body.lp-item-moving {
   border-radius: 50%;
 }
 .learn-press-tip-floating .close::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "lp-icon";
   content: "\f00d";
 }
 .learn-press-tip-floating p {
@@ -6489,6 +6413,14 @@ table.lp-material--table tr:nth-child(even) {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "lp-icon";
+  src: url("../../src/css/vendor/fonts/lp-icon/lp-icon.ttf?v3eoq3") format("truetype"), url("../../src/css/vendor/fonts/lp-icon//lp-icon.woff?v3eoq4") format("woff"), url("../../src/css/vendor/fonts/lp-icon//lp-icon.svg?v3eoq4#lp-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  font-size: 1em;
+}
 .button.disabled {
   pointer-events: none;
 }
@@ -6643,41 +6575,35 @@ table.lp-material--table tr:nth-child(even) {
   top: 20px;
 }
 
-.lp-notice,
-.learn-press-notice {
+.lp-notice, .learn-press-notice {
   position: relative;
   padding: 12px;
   margin: 0;
+  /*&.lp-upgrade-notice {
+  	position: relative;
+  	border-left-color: #02b7fb;
+  	background: #bceffe;
+
+  	.close-notice {
+  		position: absolute;
+  		top: 5px;
+  		right: 10px;
+  	}
+  }*/
 }
-.lp-notice h4,
-.learn-press-notice h4 {
+.lp-notice h4, .learn-press-notice h4 {
   margin: 10px 0 15px;
 }
-.lp-notice p,
-.learn-press-notice p {
+.lp-notice p, .learn-press-notice p {
   margin: 0 0 5px 0;
   padding: 0 2px;
 }
-.lp-notice.lp-upgrade-notice,
-.learn-press-notice.lp-upgrade-notice {
-  position: relative;
-  border-left-color: #02b7fb;
-  background: #bceffe;
-}
-.lp-notice.lp-upgrade-notice .close-notice,
-.learn-press-notice.lp-upgrade-notice .close-notice {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-.lp-notice .lp-message-dismiss,
-.learn-press-notice .lp-message-dismiss {
+.lp-notice .lp-message-dismiss, .learn-press-notice .lp-message-dismiss {
   position: absolute;
   top: 12px;
   right: 12px;
 }
-.lp-notice .notice-dismiss,
-.learn-press-notice .notice-dismiss {
+.lp-notice .notice-dismiss, .learn-press-notice .notice-dismiss {
   position: absolute;
   top: 0;
   right: 1px;
@@ -6692,8 +6618,7 @@ table.lp-material--table tr:nth-child(even) {
   box-shadow: none;
   cursor: pointer;
 }
-.lp-notice .notice-dismiss::before,
-.learn-press-notice .notice-dismiss::before {
+.lp-notice .notice-dismiss::before, .learn-press-notice .notice-dismiss::before {
   display: block;
   width: 20px;
   height: 20px;
@@ -6889,6 +6814,10 @@ table.lp-material--table tr:nth-child(even) {
 }
 .select2 .select2-selection.select2-selection--multiple {
   min-height: 30px;
+}
+
+.list-pages-wrapper .select2-container--default .select2-selection--single .select2-selection__clear {
+  margin: 0;
 }
 
 .edit-post-layout__metaboxes .rwmb-label > label {

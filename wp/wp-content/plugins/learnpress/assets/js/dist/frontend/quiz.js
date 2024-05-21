@@ -1825,7 +1825,7 @@ const Timer = () => {
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "countdown"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "fas fa-stopwatch"
+    className: "lp-icon-stopwatch"
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", null, formatTime()), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
     type: "hidden",
     name: "lp-quiz-time-spend",

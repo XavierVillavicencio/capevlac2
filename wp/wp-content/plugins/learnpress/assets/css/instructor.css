@@ -7,8 +7,94 @@
 * @since 4.2.3
 * @version 1.0.0
 */
+/**
+ * Mixin
+ */
+@-webkit-keyframes rotating4 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating4 {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animation4 {
+  from {
+    left: -40%;
+    width: 40%;
+  }
+  to {
+    left: 100%;
+    width: 10%;
+  }
+}
+@keyframes animation4 {
+  from {
+    left: -40%;
+    width: 40%;
+  }
+  to {
+    left: 100%;
+    width: 10%;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*  start reset css */
+body {
+  background: #fff;
+}
+body.learnpress-page {
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+input, button, select, textarea {
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+a {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
 .lp-content-area {
-  max-width: var(--lp-cotainer-max-with) !important;
+  max-width: var(--lp-container-max-width) !important;
   margin: 0 auto;
   padding-right: var(--lp-cotainer-padding);
   padding-left: var(--lp-cotainer-padding);
@@ -25,6 +111,14 @@
 * @since 4.2.3
 * @version 1.0.0
 */
+:root {
+  --lp-cotainer-max-with: var(--lp-container-max-width);
+}
+
+.wp-block-group {
+  --lp-container-max-width: var(--wp--style--global--wide-size);
+}
+
 body .entry-content.has-global-padding {
   padding-left: 0;
   padding-right: 0;
@@ -35,7 +129,7 @@ body .wp-site-blocks {
 }
 
 .learnpress-v4 .lp-content-area {
-  --lp-cotainer-max-with: inherit;
+  --lp-container-max-width: inherit;
   --lp-cotainer-padding: 0;
 }
 
@@ -67,11 +161,6 @@ body .wp-site-blocks {
 .lp-single-instructor__info .instructor-avatar {
   margin-right: 30px;
 }
-.lp-single-instructor__info .instructor-avatar img {
-  border: 1px solid var(--lp-instructor-border-color);
-  display: block;
-  object-fit: cover;
-}
 .lp-single-instructor__info__right {
   flex: 1;
 }
@@ -79,9 +168,10 @@ body .wp-site-blocks {
   margin: 0;
 }
 .lp-single-instructor__info__right .instructor-social {
-  margin: 25px 0 15px;
+  margin: 16px 0;
   display: flex;
   gap: 25px;
+  font-size: calc(var(--lp-font-size-base, 1em) * 1.25);
 }
 .lp-single-instructor__info__right .instructor-social:empty {
   margin: 0;
@@ -117,7 +207,7 @@ body .wp-site-blocks {
 .lp-single-instructor .ul-instructor-courses a:hover {
   color: var(--lp-primary-color);
 }
-.lp-single-instructor .ul-instructor-courses h3 {
+.lp-single-instructor .ul-instructor-courses h2 {
   font-size: 1.2em;
   font-weight: bold;
   margin-top: 0;
@@ -125,7 +215,7 @@ body .wp-site-blocks {
   border-bottom: 1px solid var(--lp-instructor-border-color);
   margin-bottom: var(--lp-instructor-item-padding);
 }
-.lp-single-instructor .ul-instructor-courses h3 a {
+.lp-single-instructor .ul-instructor-courses h2 a {
   text-decoration: none;
 }
 .lp-single-instructor .ul-instructor-courses .course-img img {
@@ -200,7 +290,7 @@ body .wp-site-blocks {
 }
 .learn-press-pagination .page-numbers > li .page-numbers {
   float: unset;
-  padding: 0 14px;
+  padding: 0 12px;
   color: #666;
   text-decoration: none;
 }

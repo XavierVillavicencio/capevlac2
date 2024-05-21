@@ -103,19 +103,19 @@
   transition: 0.3s;
   cursor: pointer;
 }
-.elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content .icon-toggle-filter.fa-angle-down {
+.elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content .icon-toggle-filter.fa-angle-down, .elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content .icon-toggle-filter.lp-icon-angle-down {
   display: block;
 }
-.elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content .icon-toggle-filter.fa-angle-up {
+.elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content .icon-toggle-filter.fa-angle-up, .elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content .icon-toggle-filter.lp-icon-angle-up {
   display: none;
 }
 .elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content > .lp-form-course-filter__item .lp-form-course-filter__content {
   display: none;
 }
-.elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content.toggle-on .icon-toggle-filter.fa-angle-down {
+.elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content.toggle-on .icon-toggle-filter.fa-angle-down, .elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content.toggle-on .icon-toggle-filter.lp-icon-angle-down {
   display: none;
 }
-.elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content.toggle-on .icon-toggle-filter.fa-angle-up {
+.elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content.toggle-on .icon-toggle-filter.fa-angle-up, .elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content.toggle-on .icon-toggle-filter.lp-icon-angle-up {
   display: block;
 }
 .elementor-widget-learnpress_filter_course .lp-form-course-filter .toggle-content.toggle-on > .lp-form-course-filter__item .lp-form-course-filter__content {
