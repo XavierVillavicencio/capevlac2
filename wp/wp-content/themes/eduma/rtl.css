@@ -4,7 +4,7 @@ Theme URI: https://eduma.thimpress.com/
 Author: ThimPress
 Author URI: http://thimpress.com
 Description: Theme Descriptions
-Version: 5.0.5
+Version: 5.4.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
@@ -1771,7 +1771,7 @@ article .entry-header .entry-meta li:last-child {
 }
 
 .thim-social-share {
-	float: left;
+	float: right;
 }
 
 .thim-social-share li {
@@ -4219,11 +4219,6 @@ html[dir=rtl] #tp_style_selector .style-toggle:before {
 	float: left;
 }
 
-.learn-press #learn-press-course-curriculum .section .section-header {
-	padding-left: 10px;
-	padding-right: 0;
-}
-
 #learn-press-course-description .thim-course-info,
 #tab-course-description .thim-course-info, #tab-overview .thim-course-info {
 	padding-left: 0;
@@ -4307,19 +4302,15 @@ body .thim-widget-accordion .panel-title a.collapsed:after {
 }
 
 /** Style for new style single course **/
-.learn-press #learn-press-course-curriculum .section .section-header {
-	padding-right: 55px;
-	padding-left: 55px;
-}
 
 #learn-press-course-curriculum ul.curriculum-sections .section-header .meta {
 	right: auto;
-	left: 13px;
+	left: 20px;
 }
 
 #learn-press-course-curriculum ul.curriculum-sections .section-header .collapse {
 	left: auto;
-	right: 0;
+	right: 15px;
 }
 
 #learn-press-course-curriculum ul.curriculum-sections .section-content .course-assignment .meta-left,
@@ -4521,11 +4512,6 @@ body #learn-press-block-content {
 #popup-sidebar #learn-press-course-curriculum ul.curriculum-sections .section-header .collapse {
 	right: 10px;
 	left: auto;
-}
-
-#popup-sidebar #learn-press-course-curriculum ul.curriculum-sections .section-header {
-	padding-left: 55px;
-	padding-right: 73px;
 }
 
 #course-curriculum-popup iframe {
@@ -5384,10 +5370,6 @@ body .lp-single-course.learn-press-4 #popup-course #popup-footer {
 	padding: 14px 65px 11px 10px;
 }
 
-#popup-course .question .answer-option input[type="radio"], #popup-course .question .answer-option input[type="checkbox"] {
-	margin: -19px 10px 0 0;
-}
-
 #popup-course #popup-content #learn-press-quiz-app .quiz-buttons.align-center .button-left.fixed {
 	left: 15px;
 	/* transform: none; */
@@ -5591,10 +5573,6 @@ body.rtl .learn-press-question-options > li.answer-option > label p.option-title
 	}
 }
 
-body.rtl #lp-single-course .course-payment {
-	text-align: left
-}
-
 body.rtl .thim-widget-courses-wrapper .view-all-courses {
 	right: auto;
 	left: 0
@@ -5622,4 +5600,96 @@ body.rtl.learnpress-v4 .lp-single-course .lp-course-progress-wrapper .learn-pres
 }
 #learn-press-course-curriculum ul.curriculum-sections .section-content .course-item .index{
 	direction: ltr;
+}
+body.rtl.thim-demo-university-3 footer#colophon .mc4wp-form .mc4wp-form-fields button[type=submit] {
+	left: 0;
+	right: auto;
+}
+body.rtl #toolbar .widget_search {
+	padding-left: 0;
+    padding-right: 15px;
+}
+body.rtl #toolbar .widget_search .search-form label .search-field {
+	left: 0;
+    right: auto;
+}
+body.rtl .dark-mode-toggle__button-switch {
+	flex-direction: row-reverse;
+}
+body.rtl .thim-grid-posts .article-wrapper .read-more .fa, body.rtl .thim-list-post-inner .feature-item .article-wrapper .read-more .fa {
+	margin-right: 7px;
+}
+body.rtl .thim-footer-university-4#colophon .mc4wp-form input[type=submit], body.rtl .thim-footer-university-4#colophon .mc4wp-form:after {
+	left: 0;
+    right: auto;
+}
+.demo-marketplace .thim-ekit-single-course__tabs .course-rating .rating-box {
+	text-align: right;
+}
+.demo-marketplace .thim-ekit-single-course__tabs .course-rating .average-rating .rating-box .average-value {
+	float: right;
+	margin: 0 0px 0 10px;
+}
+.elementor-widget .elementor-icon-list-icon+.elementor-icon-list-text {
+	padding-right: 5px;
+}
+.demo-marketplace .thim-ekit-single-course__tabs .course-rating .review-stars-rated {
+	padding: 6px 10px 0 0;
+}
+#popup-footer .course-item-nav .next::before {
+	margin-right: 0;
+    margin-left: 10px;
+}
+#popup-footer .prev::before {
+	margin-right: 10px;
+    margin-left: 0;
+}
+.course-extra-box__content li {
+	display: flex;
+}
+#sidebar-toggle {
+	right: auto;
+}
+body.rtl .wrapper-popup-content-right .ekit-popup-footer {
+	right: auto;
+}
+.demo-marketplace .thim-ekit-single-course__buttons form button i {
+	margin-right: 0;
+	margin-left: 10px;
+}
+.click-show-sub>li>ul {
+	left: auto;
+	right: 50%;
+}
+.click-show-sub.use-img-icon>li .count-course {
+	padding-left: 0;
+	padding-right: 65px;
+}
+.rtl .elementor-widget .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after {
+	right: auto;
+}
+.rtl.demo-marketplace .lp-form-course-filter .course-filter-reset {
+	right: auto;
+	left: 15px;
+}
+.thim-ekit-single-course__tabs #learn-press-course-description .thim-course-content {
+	padding-left: 0;
+	border-left: 0;
+}
+.rtl .thim-ekits-event__meta i {
+	margin-right: 0;
+	margin-left: 7px;
+}
+.rtl .elementor-widget-icon-box.elementor-position-left .elementor-icon-box-icon {
+	margin-left: var(--icon-box-icon-margin, 15px);
+    margin-right: 0;
+}
+.rtl .widget-area .widget_course_filter .lp-form-course-filter__item .lp-form-course-filter__title::after {
+	right: 0;
+	left: auto;
+}
+@media (min-width: 992px) {
+	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+		float: right;
+	}
 }

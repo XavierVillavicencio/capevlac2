@@ -34,6 +34,7 @@ thim_customizer()->add_field(
 		'label'         => esc_html__( 'Layout', 'eduma' ),
 		'tooltip'       => esc_html__( 'Allows you to choose a layout for the blog page.', 'eduma' ),
 		'section'       => 'blog_front',
+		'default'       => 'sidebar-right',
 		'priority'      => 12,
 		'choices'       => array(
 			'sidebar-left'  => THIM_URI . 'images/layout/sidebar-left.jpg',

@@ -2,7 +2,7 @@
 /***
  * Class ThimEdumaRegisterFunction
  *
- * @since 4.2.4
+ * @since   4.2.4
  * @version 1.0.2
  */
 
@@ -73,7 +73,7 @@ class ThimEdumaRegisterFunction {
 	 * Check login has errors
 	 *
 	 * @param null|WP_User|WP_Error $user
-	 * @param string $username
+	 * @param string                $username
 	 *
 	 * @return mixed
 	 */
@@ -88,7 +88,7 @@ class ThimEdumaRegisterFunction {
 			if ( 'incorrect_password' === $error_code ) {
 				$error_msg = __( 'The password is incorrect', 'eduma' );
 			} else {
-				$error_msg = str_replace( array( '<strong>', '</strong>' ), '', $user->errors[ $error_code ][0] );
+				$error_msg = str_replace( array( '<strong>', '</strong>' ), '', $user->errors[$error_code][0] );
 			}
 
 			$url = add_query_arg(
@@ -114,8 +114,8 @@ class ThimEdumaRegisterFunction {
 	 * 3. Redirect to $_REQUEST['redirect_to']
 	 * 4. Redirect to current url
 	 *
-	 * @param string $redirect_to
-	 * @param string $requested_redirect_to
+	 * @param string           $redirect_to
+	 * @param string           $requested_redirect_to
 	 * @param WP_User|WP_Error $user
 	 *
 	 * @return mixed|string|void
@@ -130,8 +130,8 @@ class ThimEdumaRegisterFunction {
 		}
 
 		// Set current user.
-        $rememberme = ! empty( $_POST['rememberme'] );
-        wp_set_auth_cookie( $user->ID, $rememberme, is_ssl() );
+		$rememberme = ! empty( $_POST['rememberme'] );
+		wp_set_auth_cookie( $user->ID, $rememberme, is_ssl() );
 
 		/*** purchase course */
 		$this->buy_course();
@@ -151,8 +151,8 @@ class ThimEdumaRegisterFunction {
 	}
 
 	/**
-	 * @param string $user_login
-	 * @param string $email
+	 * @param string   $user_login
+	 * @param string   $email
 	 * @param WP_Error $errors
 	 */
 	public function check_extra_register_fields( $user_login, $email, $errors ) {
@@ -213,10 +213,10 @@ class ThimEdumaRegisterFunction {
 					'learn-press/become-a-teacher-sent',
 					array(
 						'bat_email'   => $newuserdata->user_email,
-						'bat_message' => apply_filters( 'learnpress_become_instructor_message', esc_html__( 'I need become a instructor', 'learnpress' ) ),
+						'bat_message' => apply_filters( 'learnpress_become_instructor_message', esc_html__( 'I need become a instructor', 'eduma' ) ),
 					)
 				);
-				learn_press_add_message( __( 'Your request become a instructor has been sent. We will get back to you soon!', 'learnpress' ), 'success' );
+				learn_press_add_message( __( 'Your request to become an instructor has been sent. We will get back to you soon!', 'learnpress' ), 'success' );
 			}
 		}
 
@@ -281,7 +281,7 @@ class ThimEdumaRegisterFunction {
 		if ( $error_code ) {
 			$error_msg = '';
 
-			$error_msg = str_replace( array( '<strong>', '</strong>' ), '', $errors->errors[ $error_code ][0] );
+			$error_msg = str_replace( array( '<strong>', '</strong>' ), '', $errors->errors[$error_code][0] );
 
 			$url = add_query_arg(
 				array(
@@ -321,7 +321,7 @@ class ThimEdumaRegisterFunction {
 	}
 
 	/**
-	 * @param array $objectEmail
+	 * @param array   $objectEmail
 	 * @param WP_User $user
 	 *
 	 * @return array
@@ -332,7 +332,7 @@ class ThimEdumaRegisterFunction {
 
 		$set_password_link = thim_get_login_page_url() . "?action=rp&key=$key&login=" . rawurlencode( $user->user_login );
 
-		$message  = sprintf( '%s %s', __( 'Username: ', 'eduma' ), $user->user_login ) . "\r\n\r\n";
+		$message = sprintf( '%s %s', __( 'Username: ', 'eduma' ), $user->user_login ) . "\r\n\r\n";
 		$message .= __( 'To set your password, visit the following address:', 'eduma' ) . "\r\n\r\n";
 		$message .= $set_password_link . "\r\n\r\n";
 
@@ -359,7 +359,7 @@ class ThimEdumaRegisterFunction {
 		$error_code = $errors->get_error_code();
 
 		if ( $errors instanceof WP_Error && $errors->has_errors() && $error_code ) {
-			$error_msg = str_replace( array( '<strong>', '</strong>' ), '', $errors->errors[ $error_code ][0] );
+			$error_msg = str_replace( array( '<strong>', '</strong>' ), '', $errors->errors[$error_code][0] );
 		} elseif ( $_POST['user_login'] ) {
 			$user_login = trim( wp_unslash( sanitize_text_field( $_POST['user_login'] ) ) );
 
@@ -370,12 +370,12 @@ class ThimEdumaRegisterFunction {
 			}
 
 			if ( ! $user_data ) {
-				$error_msg = __( '<strong>Error</strong>: There is no account with that username or email address.','eduma' );
+				$error_msg = __( '<strong>Error</strong>: There is no account with that username or email address.', 'eduma' );
 			}
 		}
 
 		if ( ! empty( $error_msg ) ) {
- 			add_filter( 'login_errors', 'check_field_to_reset_password', 1, 9 );
+			add_filter( 'login_errors', 'check_field_to_reset_password', 1, 9 );
 
 			$url = add_query_arg(
 				array(
@@ -392,10 +392,7 @@ class ThimEdumaRegisterFunction {
 
 
 	public function add_lost_password_link( $content ) {
-		$content .= '<a class="lost-pass-link" href="' . thim_get_lost_password_url() . '" title="' . esc_attr__(
-			'Lost Password',
-			'eduma'
-		) . '">' . esc_html__( 'Lost your password?', 'eduma' ) . '</a>';
+		$content .= '<a class="lost-pass-link" href="' . thim_get_lost_password_url() . '" title="' . esc_html__( 'Lost Password', 'eduma' ) . '">' . esc_html__( 'Lost your password?', 'eduma' ) . '</a>';
 
 		return $content;
 	}
@@ -423,7 +420,7 @@ class ThimEdumaRegisterFunction {
 				$error_msg  = 'invalid key';
 				$error_code = $user->get_error_code();
 				if ( $user && $error_code ) {
-					$error_msg = $user->errors[ $error_code ][0];
+					$error_msg = $user->errors[$error_code][0];
 				}
 
 				wp_redirect(
@@ -505,28 +502,6 @@ class ThimEdumaRegisterFunction {
 				LP_Settings::instance()->get( 'woo-payment' )['enable'] == 'yes' &&
 				isset( $_POST['add-to-cart'] ) ) {
 
-				/*$curl = curl_init();
-
-				// Set product id for param add-to-cart - woo will detect and add to cart
-				$_POST['add-to-cart'] = $course_id;
-
-				curl_setopt_array(
-					$curl,
-					array(
-						CURLOPT_URL            => home_url(),
-						CURLOPT_HEADER         => false,
-						CURLOPT_SSL_VERIFYPEER => false,
-						CURLOPT_RETURNTRANSFER => true,
-						CURLOPT_HTTPHEADER     => array(),
-					)
-				);
-
-				curl_setopt( $curl, CURLOPT_HTTPGET, true );
-				curl_exec( $curl );*/
-
-				/*$wc_cart = WC()->cart;
-				$wc_cart->add_to_cart( $course_id );*/
-
 				$pageCheckoutId = get_option( 'woocommerce_checkout_page_id', false );
 				if ( $pageCheckoutId ) {
 					$redirect_to = get_permalink( $pageCheckoutId );
@@ -560,7 +535,8 @@ class ThimEdumaRegisterFunction {
 					die;
 				}
 			}
-		} catch ( Throwable $e ) {
+		}
+		catch ( Throwable $e ) {
 			error_log( $e->getMessage() );
 		}
 	}
@@ -589,9 +565,10 @@ class ThimEdumaRegisterFunction {
 	 */
 	public function message_when_user_register_auto_login( $objectEmail = array() ) {
 		if ( get_theme_mod( 'thim_auto_login', true ) ) {
-			$objectEmail['subject'] = 'Welcome to [%s]';
+			$objectEmail['subject'] = __( 'Welcome to [%s]', 'eduma' );
 			$objectEmail['message'] = sprintf(
-				'Hi ###USERNAME###,
+				__(
+					'Hi ###USERNAME###,
 
 You registered successfully on %s site
 
@@ -599,7 +576,8 @@ This email has been sent to ###EMAIL###
 
 Regards,
 All at ###SITENAME###
-###SITEURL###',
+###SITEURL###', 'eduma'
+				),
 				get_bloginfo()
 			);
 

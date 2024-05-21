@@ -111,3 +111,10 @@ if ( ! function_exists( 'thim_pmpro_getLevelCost' ) ) {
  */
 remove_filter( 'login_redirect', 'pmpro_login_redirect', 10 );
 add_filter( 'pmpro_register_redirect', '__return_false' );
+add_filter( 'learn_press_pmpro_style_header', 'learn_press_pmpro_custom_icon_header', 10, 2 );
+function learn_press_pmpro_custom_icon_header( $string, $level_id ) {
+	$icon = get_option( 'thim_level_' . $level_id ) ? get_option( 'thim_level_' . $level_id ) : '';
+	if ( $icon ) {
+		return 'style="background-image: url(' . $icon . ');"';
+	}
+}

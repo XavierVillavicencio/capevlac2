@@ -21,7 +21,7 @@ $has_courses = $wishlist ? true : false;
 
 		<?php foreach( $wishlist as $post ) { ?>
 
-			<?php learn_press_course_wishlist_template( 'wishlist-content.php' ); ?>
+			<?php LP_Addon_Wishlist_Preload::$addon->get_template( 'wishlist-content.php' ); ?>
 
 		<?php } ?>
 	</div>

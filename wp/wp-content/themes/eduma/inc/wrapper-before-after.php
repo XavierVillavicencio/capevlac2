@@ -22,13 +22,13 @@ if ( ! function_exists( 'thim_wrapper_layout' ) ) :
 		// get layout
 		if ( is_page() || is_single() || $get_post_type == "lp_collection" ) {
 			$postid         = get_the_ID();
-			$wrapper_layout = get_theme_mod( $prefix . '_single_layout', 'full-content' );
+			$wrapper_layout = get_theme_mod( $prefix . '_single_layout', 'sidebar-right' );
 			if ( $get_post_type == "forum" || $get_post_type == "topic" ) {
 				$wrapper_layout = get_theme_mod( $prefix . '_cate_layout', 'full-content' );
 			}
 
 			if ( is_page() ) {
-				$wrapper_layout = get_theme_mod( $prefix . '_layout', 'full-content' );
+				$wrapper_layout = get_theme_mod( $prefix . '_layout', 'sidebar-right' );
 				if ( get_the_ID() == get_option( 'woocommerce_cart_page_id' ) ||
 					get_the_ID() == get_option( 'woocommerce_checkout_page_id' ) ||
 					get_the_ID() == get_option( 'learn_press_profile_page_id' ) ||
@@ -49,7 +49,7 @@ if ( ! function_exists( 'thim_wrapper_layout' ) ) :
 				$wrapper_layout = 'full-content';
 			}
 		} else {
-			$wrapper_layout = get_theme_mod( $prefix . '_cate_layout', 'full-content' );
+			$wrapper_layout = get_theme_mod( $prefix . '_cate_layout', 'sidebar-right' );
 			/***********custom layout*************/
 			$using_custom_layout = get_term_meta( $cat_ID, 'thim_layout', true );
 			if ( $using_custom_layout <> '' ) {
@@ -125,7 +125,11 @@ if ( ! function_exists( 'thim_wrapper_loop_end' ) ) :
 
 		if ( $class_col == 'col-sm-9 alignleft' || $class_col == 'col-sm-9 alignright' ) {
 			if ( is_search() ) {
-				get_sidebar();
+				if ( ! empty( $_GET['post_type'] ) && 'product' === $_GET['post_type'] ) {
+					get_sidebar( 'shop' );
+				}else {
+					get_sidebar();
+				}
 			} else if ( $get_post_type == "lp_course" || $get_post_type == "lp_quiz" || thim_check_is_course() || thim_check_is_course_taxonomy() ) {
 				get_sidebar( 'courses' );
 			} else if ( $get_post_type == "tp_event" ) {

@@ -23,7 +23,7 @@
 define( 'DB_NAME', 'Capevlac' );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'db_user' );
 
 /** Database password */
 define( 'DB_PASSWORD', 'xqdy=]wD' );
@@ -48,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'NKOQAM{H:cJ/|A7cLr*;_,Z]+-TEPt+dSaT89Q14|xlx_IF= cE!}Q{pm8E0;V;l' );
-define( 'SECURE_AUTH_KEY',  'MSE7t,d43QghIx<uY~d@=cg4zYaL5W#m1C.|u+3P}>A9O~U(~E@bG3+Ai#%v~S6;' );
-define( 'LOGGED_IN_KEY',    '&q7 ub2rN`^~PD;]wsO,jv>3 iI}Zo7FBF+pi?SM:%cGT#Y~~j$:#Ah*p#{~)$Oo' );
-define( 'NONCE_KEY',        'b#(Qx>H{;tFS|[o&(yNXaSN?}bgrwfT=c!sLP3<*%(eqf#gv4PQo$*Yw/G9s[zR|' );
-define( 'AUTH_SALT',        'cQ%nab645?K>gLrY7^Ky|N{)yB!87UD4tv-j<p|Z1CmpoTu:E_BK*B}RP=i^ ~yv' );
-define( 'SECURE_AUTH_SALT', '4_${ZFmjjW;gw?oIENqI?@na@a`n(q<!kro%+,j&arun^lPF|SG{$$*>!P}?@Zg5' );
-define( 'LOGGED_IN_SALT',   'II0jTa81&.KSo`j*UU;4Q<McbPQ1*PNhzi3{5-n@8PsU187Rs}CW)xHEOgVaZW30' );
-define( 'NONCE_SALT',       'JZ!VZoS>#j0[v-`k0GW3xyK@yfdqI{Q!Y6AtA^3Ok1]a}?:%~uO0faQ8<h$]B?lg' );
+define( 'AUTH_KEY',         'E>{Z15a@Ra4s3(~8N8t-&%J[REKm6FR4c1&q7GRWku#mC<TC9N/9>hSC[*5emfz^' );
+define( 'SECURE_AUTH_KEY',  'W?MW9zJN]Ks> xp#AI<8>%7rU7t^e=0W4T^J>5W`F[ArnXG Sqv|3xnfm#WFZ[Y~' );
+define( 'LOGGED_IN_KEY',    'XfCh<9VItuyifCW|;=c-qVP5GH[/80+C0M0+*?_9q7^XZG?0D4=KcU%5iF-FwgY)' );
+define( 'NONCE_KEY',        'OGHsGD,%TZgd{ a8yR{Js2jte>>/ Enedg{,l:i44~O}[rk,7L,a>Ouwg>(E}H[Z' );
+define( 'AUTH_SALT',        'hL8dfQ1Vq<&xGd@bvCW-~iK$;,HsTMkil~.:X|B+&!u.4x!(05CcOJE?*mJK=P33' );
+define( 'SECURE_AUTH_SALT', 'q.,*s|C[UWghD.:6-,}l,>H?/*qu7epKJ~){)q /7`%+01bg|fucm:^u`IT+;RwF' );
+define( 'LOGGED_IN_SALT',   'oCU=~yl,.j,/APm+G4._b3d#eF>aG*5FlHaH_.G&*}BChgYJz91][~+I|7Q_%&M*' );
+define( 'NONCE_SALT',       'ImouD;0|nsrySf)]:u7-d{2v6./.7#p=X^1LSi4C]*>ZF-nA}kA*gMRH}Rrqkwno' );
 
 /**#@-*/
 
@@ -83,13 +83,6 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-define( 'WP_ALLOW_MULTISITE', true );
-define( 'MULTISITE', true );
-define( 'SUBDOMAIN_INSTALL', false );
-define( 'DOMAIN_CURRENT_SITE', 'localhost:8000' );
-define( 'PATH_CURRENT_SITE', '/' );
-define( 'SITE_ID_CURRENT_SITE', 1 );
-define( 'BLOG_ID_CURRENT_SITE', 1 );
 
 
 /* That's all, stop editing! Happy publishing. */

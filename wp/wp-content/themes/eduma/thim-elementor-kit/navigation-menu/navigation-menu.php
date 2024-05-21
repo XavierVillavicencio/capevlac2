@@ -165,7 +165,7 @@ class Thim_Ekit_Widget_Navigation_Menu extends Widget_Base {
 		$this->add_responsive_control(
 			'list_margin',
 			[
-				'label'      => esc_html__( 'Margin (px)', 'edu-press' ),
+				'label'      => esc_html__( 'Margin (px)', 'eduma' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'selectors'  => [
@@ -185,7 +185,7 @@ class Thim_Ekit_Widget_Navigation_Menu extends Widget_Base {
 		$this->add_responsive_control(
 			'item_padding',
 			[
-				'label'      => esc_html__( 'Padding (px)', 'edu-press' ),
+				'label'      => esc_html__( 'Padding (px)', 'eduma' ),
 				'type'       => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'selectors'  => [

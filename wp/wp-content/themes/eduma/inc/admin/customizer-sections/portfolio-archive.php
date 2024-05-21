@@ -22,7 +22,7 @@ thim_customizer()->add_field(
 		'tooltip'  => esc_html__( 'Allows you to choose a layout for all portfolio archive pages.', 'eduma' ),
 		'section'  => 'portfolio_archive',
 		'priority' => 12,
-		'default'  => 'full-content',
+		'default'  => 'sidebar-right',
 		'choices'  => array(
 			'sidebar-left'  => THIM_URI . 'images/layout/sidebar-left.jpg',
 			'full-content'    => THIM_URI . 'images/layout/body-full.jpg',

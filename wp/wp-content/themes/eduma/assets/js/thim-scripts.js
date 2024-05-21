@@ -199,19 +199,16 @@
 
 			// Show login popup when click to LP buttons
 			$('body:not(".logged-in") .enroll-course .button-enroll-course, body:not(".logged-in") form.purchase-course:not(".guest_checkout") .button:not(.button-add-to-cart)').on('click', function (e) {
-				e.preventDefault()
-
 				if ($('body').hasClass('thim-popup-feature')) {
+					e.preventDefault();
 					$('.thim-link-login.thim-login-popup .login').trigger('click')
 
 					// Add param purchase course to login and Register form if exists
 					teduma.add_params_purchase_course_to_el(teduma.el_loginpopopform)
 					teduma.add_params_purchase_course_to_el(teduma.el_registerPopupForm)
-
-				} else {
-					window.location.href = $(this).parent().find('input[name=redirect_to]').val()
 				}
 			})
+
 			$('.learn-press-content-protected-message .lp-link-login').on('click', function (e) {
 				e.preventDefault()
 

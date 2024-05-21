@@ -285,7 +285,7 @@ class Thim_Ekit_Widget_Heading extends Widget_Base {
  	}
 
 	public function render_html( $settings ) {
-	 
+
 		$class = '';
 		if ( isset( $settings['text_align'] ) ) {
 			$class .= ' ' . $settings['text_align'];
@@ -298,7 +298,7 @@ class Thim_Ekit_Widget_Heading extends Widget_Base {
 			echo '<div class="sub-heading">' . wpautop($settings['sub_heading']) . '</div>';
 		}
 
-		if ( isset( $settings['title'] ) ) {
+		if ( isset( $settings['title'] ) && $settings['title'] ) {
 			echo '<' . $settings['size'] . ' class="title">' . $settings['title'] . $title_main . '</' . $settings['size'] . '>';
 		}
 		if ( isset( $settings['clone_title'] ) && isset( $settings['title'] ) && $settings['clone_title'] ) {

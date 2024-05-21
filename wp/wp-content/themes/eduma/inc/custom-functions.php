@@ -1180,7 +1180,15 @@ if ( ! function_exists( 'thim_check_is_course_taxonomy' ) ) {
 		}
 	}
 }
-
+if ( ! function_exists( 'thim_check_is_profile' ) ) {
+	function thim_check_is_profile() {
+		if ( function_exists( 'learn_press_is_profile' ) && learn_press_is_profile() ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
 if ( ! function_exists( 'thim_check_learnpress' ) ) {
 	function thim_check_learnpress() {
 		if ( function_exists( 'is_learnpress' ) && is_learnpress() ) {
@@ -2465,7 +2473,7 @@ function thim_custom_internal_css() {
 		echo "\r\n/** CSS Single Course */\r\n";
 		include_once THIM_DIR . "/assets/css/libs/course-single.css";
  	}
-	if ( ( ( get_post_type() == "lp_course" || thim_check_is_course() ) & ! is_single() ) || get_post_type() == "lp_collection" || $css_preview ) {
+	if ( ( ( get_post_type() == "lp_course" || thim_check_is_course() || thim_check_is_profile()) & ! is_single() ) || get_post_type() == "lp_collection" || $css_preview ) {
 		echo "\r\n/** CSS Archive Course */\r\n";
 		include_once THIM_DIR . "/assets/css/libs/archive-course.css";
 	}

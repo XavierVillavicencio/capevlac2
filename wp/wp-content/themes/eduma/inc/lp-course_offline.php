@@ -258,56 +258,56 @@ if ( ! function_exists( 'thim_course_offline_course_info' ) ) {
 					echo '<li class="duration-feature">
 						<i class="fa fa-clock-o"></i>
 						<span class="label">' . esc_html__( 'Duration', 'eduma' ) . '</span>
-						<span class="value">' . esc_html__( $duration ) . '</span>
+						<span class="value">' . esc_attr( $duration ) . '</span>
 					</li>';
 				}
 				if ( $cat_name ) {
 					echo '<li class="activities-feature">
 							<i class="fa fa-futbol-o"></i>
 							<span class="label">' . esc_html__( 'Activities', 'eduma' ) . '</span>
-							<span class="value">' . esc_html__( $cat_name ) . '</span>
+							<span class="value">' . esc_attr( $cat_name ) . '</span>
 						</li>';
 				}
 				if ( $class_size ) {
 					echo '<li class="class-feature">
 							<i class="fa fa-users"></i>
 							<span class="label">' . esc_html__( 'Class Sizes', 'eduma' ) . '</span>
-							<span class="value">' . esc_html__( $class_size ) . '</span>
+							<span class="value">' . esc_attr( $class_size ) . '</span>
 						</li>';
 				}
 				if ( $year_old ) {
 					echo '<li class="years-feature">
 							<i class="fa fa-sun-o"></i>
 							<span class="label">' . esc_html__( 'Years Old', 'eduma' ) . '</span>
-							<span class="value">' . esc_html__( $year_old ) . '</span>
+							<span class="value">' . esc_attr( $year_old ) . '</span>
 						</li>';
 				}
 				if ( $time ) {
 					echo '<li class="time-feature">
 							<i class="fa fa-bell-o"></i>
 							<span class="label">' . esc_html__( 'Time', 'eduma' ) . '</span>
-							<span class="value">' . esc_html__( $time ) . '</span>
+							<span class="value">' . esc_attr( $time ) . '</span>
 						</li>';
 				}
 				if ( $day_of_week ) {
 					echo '<li class="day-of-week-feature">
 							<i class="fa fa-calendar-o"></i>
 							<span class="label">' . esc_html__( 'Day of week', 'eduma' ) . '</span>
-							<span class="value">' . esc_html__( $day_of_week ) . '</span>
+							<span class="value">' . esc_attr( $day_of_week ) . '</span>
 						</li>';
 				}
 				if ( $skill_level ) {
 					echo '<li class="level-feature">
 							<i class="fa fa-calendar-o"></i>
 							<span class="label">' . esc_html__( 'Skill level', 'eduma' ) . '</span>
-							<span class="value">' . esc_html__( $skill_level ) . '</span>
+							<span class="value">' . esc_attr( $skill_level ) . '</span>
 						</li>';
 				}
 				if ( $available_seats ) {
 					echo '<li class="available-feature">
 							<i class="fa fa-user-plus"></i>
 							<span class="label">' . esc_html__( 'Available Seats', 'eduma' ) . '</span>
-							<span class="value">' . esc_html__( $available_seats ) . '</span>
+							<span class="value">' . esc_attr( $available_seats ) . '</span>
 						</li>';
 				}
 				?>
@@ -336,24 +336,24 @@ if ( ! function_exists( 'thim_course_offline_course_meta' ) ) {
 
 		if ( $time_course || $day_of_week ) {
 			echo '<ul class="course-info">';
-			echo $time_course ? '<li class="info-item"><span>' . esc_html__( 'Time: ', 'eduma' ) . '</span>' . esc_html__( $time_course ) . '</li>' : '';
-			echo $day_of_week ? '<li class="info-item"><span>' . esc_html__( 'Days of Week: ', 'eduma' ) . '</span>' . esc_html__( $day_of_week ) . '</li>' : '';
+			echo $time_course ? '<li class="info-item"><span>' . esc_html__( 'Time: ', 'eduma' ) . '</span>' . esc_attr( $time_course ) . '</li>' : '';
+			echo $day_of_week ? '<li class="info-item"><span>' . esc_html__( 'Days of Week: ', 'eduma' ) . '</span>' . esc_attr( $day_of_week ) . '</li>' : '';
 			echo '</ul>';
 		}
 
 		if ( $class_size || $year_old || $price ) {
 			echo '<div class="course-offline-meta' . $only_price . '">';
 			if ( ! empty( $class_size ) ) {
-				echo '<div class="class-size"><label>' . esc_html__( 'Class Size', 'eduma' ) . '</label><div class="value">' . esc_html__( $class_size ) . '</div></div>';
+				echo '<div class="class-size"><label>' . esc_html__( 'Class Size', 'eduma' ) . '</label><div class="value">' . esc_attr( $class_size ) . '</div></div>';
 			}
 
 			if ( ! empty( $year_old ) ) {
-				echo '<div class="year-old"><label>' . esc_html__( 'Years Old', 'eduma' ) . '</label><div class="value">' . esc_html__( $year_old ) . '</div></div>';
+				echo '<div class="year-old"><label>' . esc_html__( 'Years Old', 'eduma' ) . '</label><div class="value">' . esc_attr( $year_old ) . '</div></div>';
 			}
 
 			if ( ! empty( $price ) ) {
 				echo '<div class="course-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">';
-				echo '<div class="value " itemprop="price" content="' . esc_attr( $price ) . '">' . esc_html__( $price ) . '</div>';
+				echo '<div class="value " itemprop="price" content="' . esc_attr( $price ) . '">' . esc_attr( $price ) . '</div>';
 				echo ( ! empty( $unit_price ) ) ? '<div class="unit-price">' . $unit_price . '</div>' : '';
 				echo '</div>';
 			}
@@ -513,7 +513,7 @@ function thim_kits_meta_data_course_offline( $string, $meta_data, $settings){
 			if($settings['label_meta_data'] != 'yes'){
  				$string .= '<label>' . esc_html__( 'Time', 'eduma' ) . '</label>';
 			}
-			$string .= '<span class="value">' . esc_html__( $time ) . '</span></span>';
+			$string .= '<span class="value">' . esc_attr( $time ) . '</span></span>';
 		}
 
 	}
@@ -529,7 +529,7 @@ function thim_kits_meta_data_course_offline( $string, $meta_data, $settings){
 			if($settings['label_meta_data'] != 'yes'){
  				$string .= '<label>' . esc_html__( 'Day of Week', 'eduma' ) . '</label>';
 			}
-			$string .= '<span class="value">' . esc_html__( $day_of_week ) . '</span></span>';
+			$string .= '<span class="value">' . esc_attr( $day_of_week ) . '</span></span>';
  		}
 
 	}

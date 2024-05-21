@@ -301,7 +301,7 @@ thim_customizer()->add_field(
 	array(
 		'id'       => 'thim_top_heading_padding',
 		'type'     => 'dimensions',
-		'label'    => esc_html__( 'Padding Title' ),
+		'label'    => esc_html__( 'Padding Title','eduma' ),
 		'section'  => 'top_heading_options',
 		'priority' => 80,
 		'default'  => [

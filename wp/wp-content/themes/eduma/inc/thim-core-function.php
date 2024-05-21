@@ -60,6 +60,8 @@ if ( ! function_exists( 'thim_import_add_basic_settings' ) ) {
 		$settings[] = 'medium_size_h';
 		$settings[] = 'woocommerce_single_image_width';
 		$settings[] = 'woocommerce_thumbnail_image_width';
+		$settings[]	= 'learn_press_primary_color';
+		$settings[] = 'learn_press_secondary_color';
 		return $settings;
 	}
 }

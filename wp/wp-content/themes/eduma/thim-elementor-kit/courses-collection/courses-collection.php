@@ -205,7 +205,7 @@ class Thim_Ekit_Widget_Courses_Collection extends Widget_Base {
 			Group_Control_Background::get_type(),
 			[
 				'name'     => 'thumb_overlay',
-				'label'    => esc_html__( 'Background', 'edu-press' ),
+				'label'    => esc_html__( 'Background', 'eduma' ),
 				'types'    => [ 'classic', 'gradient' ],
 				'exclude'  => [ 'image' ],
 				'selector' => '{{WRAPPER}} .thim-courses-collection .thumbnail .feature-image:after',

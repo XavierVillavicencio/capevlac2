@@ -1,7 +1,24 @@
 <?php
+/**
+ * Template: Levels
+ * Version: 3.0.1
+ *
+ * See documentation for how to override the PMPro templates.
+ * @link https://www.paidmembershipspro.com/documentation/templates/
+ *
+ * @version 3.0.1
+ *
+ * @author Paid Memberships Pro
+ */
 global $current_user;
-$levels       = lp_pmpro_get_all_levels();
-$list_courses = lp_pmpro_list_courses( $levels );
+if (version_compare(PMPRO_VERSION, '2.5.8', '<')) {
+	$levels = lp_pmpro_get_all_levels();
+} else {
+	$levels = pmpro_sort_levels_by_order(lp_pmpro_get_all_levels());
+}
+$list_courses = lp_pmpro_list_courses($levels);
+asort($list_courses);
+
 ?>
 <?php do_action( 'learn_press_pmpro_before_levels' ); ?>
 <div class="responsive-table">

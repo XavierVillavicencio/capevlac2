@@ -398,26 +398,15 @@ if ( ! function_exists( 'thim_course_tabs_content' ) ) {
 			'review',
 			'materials',
 		) );
-		foreach ( $defaults as $k => $v ) {
+		$group_tab = str_replace( array( 'description', 'review' ), array( 'overview', 'reviews' ), $group_tab );
 
+		foreach ( $defaults as $k => $v ) {
 			switch ( $k ) {
 				case 'overview':
-					$v['icon']  = 'fa-bookmark';
-					$new_prioty = array_keys( $group_tab, 'description' );
-					if ( $new_prioty ) {
-						$v['priority'] = $new_prioty[0];
-					} else {
-						unset( $defaults[$k] );
-					}
+					$v['icon'] = 'fa-bookmark';
 					break;
 				case 'reviews':
-					$v['icon']  = 'fa-comments';
-					$new_prioty = array_keys( $group_tab, 'review' );
-					if ( $new_prioty ) {
-						$v['priority'] = $new_prioty[0];
-					} else {
-						unset( $defaults[$k] );
-					}
+					$v['icon'] = 'fa-comments';
 					break;
 				case 'curriculum':
 					$v['icon'] = 'fa-bars';
@@ -442,16 +431,12 @@ if ( ! function_exists( 'thim_course_tabs_content' ) ) {
 					break;
 			}
 			$defaults[$k] = $v;
+			$new_prioty   = array_keys( $group_tab, $k );
 
-			$new_prioty = array_keys( $group_tab, $k );
-			if ( $k == 'overview' || $k == 'reviews' ) {
-				continue;
+			if ( $new_prioty ) {
+				$defaults[$k]['priority'] = $new_prioty[0];
 			} else {
-				if ( $new_prioty ) {
-					$defaults[$k]['priority'] = $new_prioty[0];
-				} else {
-					unset( $defaults[$k] );
-				}
+				unset( $defaults[$k] );
 			}
 		}
 
@@ -787,7 +772,7 @@ if ( ! function_exists( 'thim_display_course_filter' ) ) {
 	function thim_display_course_filter() {
 		if ( thim_is_new_learnpress( '4.2.3.2' ) ) {
 			if ( get_theme_mod( 'thim_display_course_filter', false ) ) {
-				$instance['title'] = '';
+				$instance['title']        = '';
 				$instance['show_in_rest'] = 1;
 				if ( get_theme_mod( 'thim_filter_by_cate', false ) ) {
 					$instance['fields'][0] = 'category';
@@ -804,7 +789,7 @@ if ( ! function_exists( 'thim_display_course_filter' ) ) {
 			}
 		} else {
 			// 'Remove year 2024';
-//			wp_enqueue_script( 'thim-scripts-course-filter' );
+			//			wp_enqueue_script( 'thim-scripts-course-filter' );
 			$object          = get_queried_object();
 			$current_term_id = 0;
 
@@ -1305,7 +1290,7 @@ if ( ! function_exists( 'thim_action_callback_learn_press_after_single_course' )
 					$http = 'http://';
 				}
 				?>
-				var base_url = '<?php echo home_url(); ?>';
+				var base_url = '<?php echo esc_url( home_url( '/' ) ); ?>';
 				var request_uri = '<?php echo $_SERVER['REQUEST_URI']; ?>';
 				var http = '<?php echo $http; ?>';
 				var http_host = '<?php echo $_SERVER['HTTP_HOST']; ?>';

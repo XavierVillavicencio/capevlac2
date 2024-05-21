@@ -868,7 +868,7 @@ if ( ! class_exists( 'Thim_Core_Installer' ) ) {
 		?>
 		<div class="footer text-center">
 			<div class="brand">
-				<?php esc_html_e( '&copy; ThimPress ' . date( 'Y' ) . '. All rights reserved. Powered by WordPress.', 'eduma' ); ?>
+				<?php echo '&copy; ThimPress ' . date( 'Y' ) . '. All rights reserved. Powered by WordPress.'; ?>
 			</div>
 		</div>
 		</body>

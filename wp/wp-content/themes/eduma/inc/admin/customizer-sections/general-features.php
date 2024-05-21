@@ -156,7 +156,7 @@ thim_customizer()->add_field(
 	array(
 		'id'              => 'thim_border_radius',
 		'type'            => 'dimensions',
-		'label'           => esc_html__( 'Border Radius Size' ),
+		'label'           => esc_html__( 'Border Radius Size','eduma' ),
 		'section'         => 'advanced',
 		'priority'        => 40,
 		'default'         => [
