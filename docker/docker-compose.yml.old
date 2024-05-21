@@ -1,0 +1,38 @@
+version: "5"
+services:
+  webserver:
+    container_name: CapevlacApache
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../wp/:/var/www/html
+    ports:
+      - 80:80
+    depends_on:
+      - mysql-db
+    links:
+      - mysql-db
+  mysql-db:
+    container_name: CapevlacMySql
+    build:
+      context: .
+      dockerfile: Dockerfile-Mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: xqdy=]wD
+      MYSQL_DATABASE: Capevlac
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: xqdy=]wD
+    ports:
+      - "3306:3306"
+  phpmyadmin:
+    container_name: CapevlacPhpMyAdmin
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql-db
+    ports:
+      - "8081:80"
+    environment:
+      UPLOAD_LIMIT: 2048000K
+      PMA_HOST: CapevlacMySql
+      MYSQL_ROOT_PASSWORD: xqdy=]wD
