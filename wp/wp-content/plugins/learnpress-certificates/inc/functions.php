@@ -1,35 +1,5 @@
 <?php
 /**
- * @param string $template_name
- * @param array  $args
- * @deprecated 4.0.4
- */
-function learn_press_certificate_get_template( $template_name, $args = array() ) {
-	_deprecated_function( __FUNCTION__, '4.0.4' );
-	learn_press_get_template( $template_name, $args, learn_press_template_path() . DIRECTORY_SEPARATOR . 'addons' . DIRECTORY_SEPARATOR . 'certificates' . DIRECTORY_SEPARATOR, LP_ADDON_CERTIFICATES_PATH . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR );
-}
-
-/**
- * @param string $template_name
- * @param array  $args
- *
- * @return string
- * @deprecated 4.0.4
- */
-function learn_press_certificate_locate_template( $template_name ) {
-	_deprecated_function( __FUNCTION__, '4.0.4' );
-	return learn_press_locate_template( $template_name, learn_press_template_path() . '/addons/certificates/', LP_ADDON_CERTIFICATES_PATH . '/templates/' );
-}
-
-/**
- * @deprecated 4.0.4
- */
-function learn_press_certificates_button_download( $certificate ) {
-	_deprecated_function( __FUNCTION__, '4.0.4' );
-	learn_press_certificate_get_template( 'buttons/download.php', array( 'certificate' => $certificate ) );
-}
-
-/**
  * @param LP_User_Certificate $certificate
  */
 add_action( 'learn-press/certificates/after-certificate-content', 'learn_press_certificates_buttons', 10 );
@@ -97,7 +67,12 @@ if ( ! function_exists( 'learn_press_certificate_buy_button' ) ) {
 				}
 
 				if ( $flag_found ) {
-					echo '<a class="btn-lp-cert-view-cart" href="' . wc_get_cart_url() . '"><button class="lp-button">' . __( 'View cart certificate', 'learnpress-certificates' ) . '</button></a>';
+					$woo_cart_url = wc_get_cart_url();
+					if ( class_exists( 'SitePress' ) ) {
+						$current_lang = apply_filters( 'wpml_current_language', null );
+						$woo_cart_url = add_query_arg( [ 'lang' => $current_lang ], $woo_cart_url );
+					}
+					echo '<a class="btn-lp-cert-view-cart" href="' . $woo_cart_url . '"><button class="lp-button">' . __( 'View cart certificate', 'learnpress-certificates' ) . '</button></a>';
 				} else {
 					LP_Addon_Certificates_Preload::$addon->get_template( 'button-woo-certificate-add-to-cart.php', compact( 'course' ) );
 				}

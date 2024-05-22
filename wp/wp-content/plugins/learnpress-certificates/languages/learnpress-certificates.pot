@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the LearnPress - Certificates plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: LearnPress - Certificates 4.0.8\n"
+"Project-Id-Version: LearnPress - Certificates 4.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/learnpress-certificates\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-01-09T09:43:57+03:00\n"
+"POT-Creation-Date: 2024-05-14T11:26:59+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: learnpress-certificates\n"
@@ -34,6 +34,14 @@ msgstr ""
 msgid "http://thimpress.com"
 msgstr ""
 
+#: inc/admin/AdminCourseCertificates.php:33
+msgid "Course is invalid!"
+msgstr ""
+
+#: inc/admin/AdminCourseCertificates.php:71
+msgid "Load more"
+msgstr ""
+
 #: inc/admin/views/advanced-settings.php:12
 msgid "Price"
 msgstr ""
@@ -46,11 +54,13 @@ msgstr ""
 msgid "Publish certificate before editing!"
 msgstr ""
 
-#: inc/admin/views/course-certificates.php:52
+#: inc/admin/views/course-certificates.php:45
+#: templates/admin-certificate.php:32
 msgid "Active:"
 msgstr ""
 
-#: inc/admin/views/course-certificates.php:75
+#: inc/admin/views/course-certificates.php:70
+#: templates/admin-layout-add-certificate.php:17
 msgid "Add new Certificate"
 msgstr ""
 
@@ -100,96 +110,95 @@ msgid "Params invalid"
 msgstr ""
 
 #: inc/class-lp-certificate-ajax.php:103
-#: inc/functions.php:100
+#: inc/functions.php:75
 msgid "View cart certificate"
 msgstr ""
 
-#: inc/class-lp-certificate-ajax.php:113
+#: inc/class-lp-certificate-ajax.php:112
 msgid "You cannot add this certificate to your cart. Maybe certificate exists"
 msgstr ""
 
-#: inc/class-lp-certificate-order.php:66
-#: inc/class-lp-certificate-order.php:272
+#: inc/class-lp-certificate-order.php:78
 #: inc/class-lp-certificate-order.php:279
-#: inc/class-lp-certificate-post-type.php:155
+#: inc/class-lp-certificate-order.php:286
+#: inc/class-lp-certificate-post-type.php:180
 #: inc/class-lp-certificate-woo.php:69
 #: templates/order/order-item.php:32
 msgid "Certificate:"
 msgstr ""
 
-#: inc/class-lp-certificate-order.php:245
 #: inc/class-lp-certificate-order.php:252
-#: inc/class-lp-certificate-post-type.php:278
-#: inc/class-lp-certificate-post-type.php:280
-#: inc/class-lp-certificate-post-type.php:366
-#: inc/class-lp-certificate-woo.php:312
+#: inc/class-lp-certificate-order.php:259
+#: inc/class-lp-certificate-post-type.php:312
+#: inc/class-lp-certificate-post-type.php:314
+#: inc/class-lp-certificate-post-type.php:400
+#: inc/class-lp-certificate-woo.php:316
 #: templates/view-button.php:28
 msgid "Certificate"
 msgstr ""
 
-#: inc/class-lp-certificate-order.php:272
 #: inc/class-lp-certificate-order.php:279
-#: inc/class-lp-certificate-post-type.php:157
+#: inc/class-lp-certificate-order.php:286
+#: inc/class-lp-certificate-post-type.php:182
 #: inc/class-lp-certificate-woo.php:69
 msgid "Course:"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:62
-#: inc/class-lp-certificate-post-type.php:253
-#: inc/class-lp-certificate-post-type.php:279
-#: inc/class-lp-certificate-post-type.php:283
+#: inc/class-lp-certificate-post-type.php:69
+#: inc/class-lp-certificate-post-type.php:313
+#: inc/class-lp-certificate-post-type.php:317
 #: inc/class-lp-certificate-settings.php:9
-#: inc/load.php:265
-#: inc/load.php:289
+#: inc/load.php:238
+#: inc/load.php:262
 #: templates/list-certificates.php:16
 msgid "Certificates"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:281
-#: inc/class-lp-certificate-post-type.php:310
+#: inc/class-lp-certificate-post-type.php:315
+#: inc/class-lp-certificate-post-type.php:344
 msgid "Add New Certificate"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:282
-#: inc/class-lp-certificate-post-type.php:311
+#: inc/class-lp-certificate-post-type.php:316
+#: inc/class-lp-certificate-post-type.php:345
 msgid "Edit Certificate"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:307
-#: inc/class-lp-certificate-post-type.php:309
+#: inc/class-lp-certificate-post-type.php:341
+#: inc/class-lp-certificate-post-type.php:343
 msgid "User Certificate"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:308
-#: inc/class-lp-certificate-post-type.php:312
+#: inc/class-lp-certificate-post-type.php:342
+#: inc/class-lp-certificate-post-type.php:346
 msgid "User Certificates"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:346
+#: inc/class-lp-certificate-post-type.php:380
 msgid "Export"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:363
+#: inc/class-lp-certificate-post-type.php:397
 msgid "Courses"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:404
+#: inc/class-lp-certificate-post-type.php:438
 msgid "-"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:442
+#: inc/class-lp-certificate-post-type.php:476
 msgid "Unassigned"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:466
+#: inc/class-lp-certificate-post-type.php:500
 msgid "Layers"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:473
+#: inc/class-lp-certificate-post-type.php:507
 msgid "Layer Options"
 msgstr ""
 
-#: inc/class-lp-certificate-post-type.php:480
+#: inc/class-lp-certificate-post-type.php:514
 msgid "Certificate Settings"
 msgstr ""
 
@@ -251,18 +260,18 @@ msgid "Certificate per page"
 msgstr ""
 
 #: inc/class-lp-certificate-settings.php:93
-msgid "Number of items Certificate displayed in one page at page Profile. If set 0 then show all."
+msgid "The total number of displayed certificates per page. If set 0 then show all."
 msgstr ""
 
-#: inc/class-lp-certificate.php:489
+#: inc/class-lp-certificate.php:488
 msgid "Certificate not available"
 msgstr ""
 
-#: inc/class-lp-certificate.php:494
+#: inc/class-lp-certificate.php:493
 msgid "Certificate is free. So you do not need to buy"
 msgstr ""
 
-#: inc/class-lp-certificate.php:506
+#: inc/class-lp-certificate.php:505
 msgid "You still didn't passed course"
 msgstr ""
 
@@ -366,7 +375,7 @@ msgstr ""
 msgid "Custom Text"
 msgstr ""
 
-#: inc/layers/class-lp-verified-link-layer.php:35
+#: inc/layers/class-lp-verified-link-layer.php:43
 msgid "QR Size"
 msgstr ""
 
@@ -374,36 +383,40 @@ msgstr ""
 msgid "Format"
 msgstr ""
 
-#: inc/load.php:511
+#: inc/load.php:487
 msgid "Delete this layer?"
 msgstr ""
 
-#: inc/load.php:529
+#: inc/load.php:505
 msgid "Course name"
 msgstr ""
 
-#: inc/load.php:534
+#: inc/load.php:510
 msgid "Student name"
 msgstr ""
 
-#: inc/load.php:539
+#: inc/load.php:515
 msgid "Course start date"
 msgstr ""
 
-#: inc/load.php:544
+#: inc/load.php:520
 msgid "Course end date"
 msgstr ""
 
-#: inc/load.php:549
+#: inc/load.php:525
 msgid "Current time"
 msgstr ""
 
-#: inc/load.php:554
+#: inc/load.php:530
 msgid "QR code"
 msgstr ""
 
-#: inc/load.php:559
+#: inc/load.php:535
 msgid "Custom"
+msgstr ""
+
+#: inc/load.php:557
+msgid "Loading"
 msgstr ""
 
 #: inc/rest-api/class-lp-rest-admin-certificate-controller.php:75
@@ -456,6 +469,10 @@ msgstr ""
 
 #: inc/rest-api/class-lp-rest-certificate-controller.php:149
 msgid "No Certificate available."
+msgstr ""
+
+#: templates/admin-button-loadmore-certificates.php:16
+msgid "Load More"
 msgstr ""
 
 #: templates/button-purchase-certificate.php:36

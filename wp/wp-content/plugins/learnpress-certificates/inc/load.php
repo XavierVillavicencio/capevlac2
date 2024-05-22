@@ -2,8 +2,8 @@
 
 use LearnPress\Certificates\DownloadFontGoogle;
 
-const LP_ADDON_CERTIFICATES_CERT_CPT      = 'lp_cert';
-const LP_ADDON_CERTIFICATES_USER_CERT_CPT = 'lp_user_cert';
+const LP_ADDON_CERTIFICATES_CERT_CPT         = 'lp_cert';
+const LP_ADDON_CERTIFICATES_USER_CERT_CPT    = 'lp_user_cert';
 define( 'LP_ADDON_CERTIFICATES_PATH', dirname( LP_ADDON_CERTIFICATES_FILE ) );
 const LP_ADDON_CERTIFICATES_TEMPLATE_DEFAULT = LP_ADDON_CERTIFICATES_PATH . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR;
 
@@ -63,33 +63,6 @@ class LP_Addon_Certificates extends LP_Addon {
 		add_action( 'learnpress/addons/frontend_editor/enqueue_scripts', array( $this, 'admin_react_scripts' ) );
 		add_action( 'learnpress_upsell/admin_enqueue_scripts', array( $this, 'admin_react_scripts' ) ); // for upsell
 
-		// Comment because it use for FE v3.x.x
-		/*add_action(
-			'learn-press/frontend-editor/enqueue',
-			function () {
-				wp_enqueue_script(
-					'certificates-js',
-					$this->get_plugin_url( 'assets/js/certificates.js' ),
-					array( 'jquery' ),
-					false,
-					true
-				);
-				wp_enqueue_script(
-					'certificates',
-					$this->get_plugin_url( 'assets/js/admin.certificates.js' ),
-					array(
-						'jquery',
-						'wp-util',
-						'jquery-ui-draggable',
-						'jquery-ui-droppable',
-						'vue-libs',
-					),
-					false,
-					true
-				);
-			}
-		);*/
-
 		// Filters
 		add_filter( 'learn-press/profile-tabs', array( $this, 'profile_tabs' ) );
 		add_filter( 'learn-press/admin/settings-tabs-array', array( $this, 'admin_settings' ) );
@@ -136,7 +109,7 @@ class LP_Addon_Certificates extends LP_Addon {
 
 	protected function _maybe_upgrade_data() {
 		if ( ! ( version_compare( LP_ADDON_CERTIFICATES_VER, '3.0.0', '=' ) &&
-			version_compare( get_option( 'certificates_db_version' ), '3.0.0', '<' ) ) ) {
+				 version_compare( get_option( 'certificates_db_version' ), '3.0.0', '<' ) ) ) {
 			return;
 		}
 
@@ -415,6 +388,9 @@ class LP_Addon_Certificates extends LP_Addon {
 	public function update_template() {
 		$id       = LP_Request::get_int( 'id' );
 		$template = LP_Request::get_string( 'template' );
+
+		// Check if link same domain, remove domain name.
+		$template = str_replace( home_url(), '', $template );
 		if ( $id ) {
 			update_post_meta( $id, '_lp_cert_template', $template );
 		}
@@ -454,7 +430,7 @@ class LP_Addon_Certificates extends LP_Addon {
 		);
 		$rules[ LP_ADDON_CERTIFICATES_CERT_CPT ]['single_view'] = array(
 			'^' . $slug_page_single_cert . '/([^/]*)/?$' =>
-			'index.php?view-cert=$matches[1]',
+				'index.php?view-cert=$matches[1]',
 		);
 
 		return $rules;
@@ -577,6 +553,9 @@ class LP_Addon_Certificates extends LP_Addon {
 			'base_url'        => home_url(),
 			'url_upload_cert' => home_url( 'upload' ),
 			'url_ajax'        => admin_url( 'admin-ajax.php' ),
+			'i18n'            => array(
+				'loading' => __( 'Loading', 'learnpress-certificates' ),
+			),
 		);
 
 		$ids_screen_valid  = array( 'lp_course', 'lp_cert' );
@@ -593,18 +572,16 @@ class LP_Addon_Certificates extends LP_Addon {
 			array(),
 			'1.4.13',
 			[
-				'in_footer' => true,
-				'strategy'  => 'defer',
+				'strategy' => 'defer',
 			]
 		);
 		wp_register_script(
 			'certificates-js',
 			$this->get_plugin_url( "assets/dist/js/frontend/certificates{$min}.js" ),
-			array( 'jquery', 'wp-api-fetch' ),
+			array( 'jquery', 'wp-api-fetch', 'fabric' ),
 			$ver,
 			[
-				'in_footer' => true,
-				'strategy'  => 'defer',
+				'strategy' => 'defer',
 			]
 		);
 
@@ -617,11 +594,13 @@ class LP_Addon_Certificates extends LP_Addon {
 				'certificates',
 				$this->get_plugin_url( "assets/dist/js/backend/admin.certificates{$min}.js" ),
 				array(
+					'fabric',
 					'jquery',
 					'wp-util',
 					'jquery-ui-draggable',
 					'jquery-ui-droppable',
 					'vue-libs',
+					'certificates-js'
 				),
 				$ver,
 				[
@@ -642,14 +621,11 @@ class LP_Addon_Certificates extends LP_Addon {
 
 			if ( $id_current_screen == 'lp_course' ) {
 				wp_enqueue_style( 'admin-certificates-css' );
-				wp_enqueue_script( 'fabric' );
-				wp_enqueue_script( 'certificates-js' );
 				wp_enqueue_script( 'certificates' );
 			}
 
 			if ( $id_current_screen == 'lp_cert' ) {
 				wp_enqueue_style( 'admin-certificates-css' );
-				wp_enqueue_script( 'fabric' );
 				wp_enqueue_script( 'md5' );
 				wp_enqueue_script( 'certificates' );
 				wp_enqueue_media();
@@ -664,8 +640,7 @@ class LP_Addon_Certificates extends LP_Addon {
 				[],
 				'1.5.3',
 				[
-					'in_footer' => true,
-					'strategy'  => 'defer',
+					'strategy' => 'defer',
 				]
 			);
 			wp_register_script(
@@ -674,8 +649,7 @@ class LP_Addon_Certificates extends LP_Addon {
 				array(),
 				'4.2',
 				[
-					'in_footer' => true,
-					'strategy'  => 'defer',
+					'strategy' => 'defer',
 				]
 			);
 			wp_register_style(
@@ -690,8 +664,7 @@ class LP_Addon_Certificates extends LP_Addon {
 				array( 'wp-api-fetch' ),
 				$ver,
 				[
-					'in_footer' => true,
-					'strategy'  => 'defer',
+					'strategy' => 'defer',
 				]
 			);
 
@@ -801,13 +774,38 @@ class LP_Addon_Certificates extends LP_Addon {
 		}
 
 		if ( $flag ) {
-			wp_enqueue_style( 'fontawesome-css' );
+			//wp_enqueue_style( 'fontawesome-css' );
 			wp_enqueue_style( 'certificates-css' );
 
 			wp_enqueue_script( 'pdfjs' );
-			wp_enqueue_script( 'fabric' );
 			wp_enqueue_script( 'downloadjs' );
 			wp_enqueue_script( 'certificates-js' );
 		}
+	}
+
+	/**
+	 * Get link certificate background by course
+	 *
+	 * @param int $course_id
+	 *
+	 * @return string
+	 * @since 4.1.0
+	 * @version 1.0.0
+	 */
+	public static function get_link_cert_bg_by_course( int $course_id ): string {
+		$cert_bg_img = get_post_meta( $course_id, '_lp_cert_template', true );
+		if ( empty( $cert_bg_img ) ) {
+			return '';
+		}
+
+		// If link is full path: https://domain.com/wp-content/uploads/2021/01/abc.jpg
+		$pattern = '#^https?://.*#';
+		if ( preg_match( $pattern, $cert_bg_img ) ) {
+			$link_cert_bg = $cert_bg_img;
+		} else { // Else link is relative path: /wp-content/uploads/2021/01/abc.jpg
+			$link_cert_bg = untrailingslashit( home_url() ) . '/' . $cert_bg_img;
+		}
+
+		return $link_cert_bg;
 	}
 }

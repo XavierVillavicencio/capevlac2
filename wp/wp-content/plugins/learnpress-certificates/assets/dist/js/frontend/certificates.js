@@ -162,6 +162,11 @@ var __webpack_exports__ = {};
             if (el_certificate_actions.length) {
               el_download = el_certificate_actions.find('.download');
             }
+            const elCerPreview = document.querySelector(el);
+            if (elCerPreview) {
+              const elCerConfig = elCerPreview.querySelector('.lp-data-config-cer');
+              elCerConfig.classList.add('loaded');
+            }
 
             // Show popup certificate
             $(document).triggerHandler('learn-press/certificates/loaded');
@@ -225,15 +230,16 @@ var __webpack_exports__ = {};
       let $object = null;
       try {
         const is_url = /^(https?|s?ftp):\/\//i.test(args.text);
-        if (args.fieldType == 'verified-link' && is_url) {
+        if (args.fieldType === 'verified-link' && is_url) {
           const qr_code = new Image();
-          defaults.type = 'image';
-          defaults.height = defaults.qr_size;
-          defaults.width = defaults.qr_size;
           qr_code.crossOrigin = 'Anonymous';
           qr_code.onload = function () {
-            $object = new fabric.Image(qr_code, defaults);
+            $object = new fabric.Image(null, defaults);
+            $object.setSrc(qr_code.src, function () {}, {
+              crossOrigin: 'Anonymous'
+            });
             $canvas.add($object);
+            //console.log(qr_code.src);
             check_layers_added_done();
           };
           qr_code.src = args.text;
@@ -429,6 +435,7 @@ var __webpack_exports__ = {};
 
   /**
    * Event add certificate to cart LP
+   * @param form
    */
   function addCertToCartLP(form) {
     let message = '';

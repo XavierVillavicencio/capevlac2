@@ -108,8 +108,7 @@ class LP_Cert_AJAX {
 		} else {
 			$wc_notices = wc_get_notices();
 
-			if ( isset( $wc_notices['error'] ) && ! empty( $wc_notices['error'] ) ) {
-				// $message_error = sanitize_text_field($wc_notices['error'][0]['notice']);
+			if ( ! empty( $wc_notices['error'] ) ) {
 				$result['message'] = esc_html__( 'You cannot add this certificate to your cart. Maybe certificate exists', 'learnpress-certificates' );
 			}
 		}

@@ -3,8 +3,8 @@ Contributors: thimpress, tunnhn, leehld, phonglq, tungnx
 Donate link:
 Tags: certificate, lms, elearning, e-learning, learning management system, education, course, courses, quiz, quizzes, questions, training, guru, sell courses
 Requires at least: 6.3
-Tested up to: 6.4.2
-Stable tag: 4.0.8
+Tested up to: 6.5.3
+Stable tag: 4.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,13 @@ Create certificates for courses of LearnPress.
 == Screenshots ==
 
 == Changelog ==
+
+= 4.1.0 (2024-05-14) =
+~ Fixed: link background certificate.
+
+= 4.0.9 (2024-04-11) =
+~ Added: load more list Certificates on Edit Course.
+~ Fixed: barcode not show on Certificate.
 
 = 4.0.8 (2024-01-09) =
 ~ Fixed: error wrong link certificate on Profile Page when Admin view User's Profile.

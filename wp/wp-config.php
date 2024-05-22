@@ -1,4 +1,5 @@
 <?php
+define( 'WP_CACHE', true );
 /**
  * The base configuration for WordPress
  *
@@ -92,7 +93,10 @@ define( 'PATH_CURRENT_SITE', '/' );
 define( 'SITE_ID_CURRENT_SITE', 1 );
 define( 'BLOG_ID_CURRENT_SITE', 1 );
 
-
+define('WP_REDIS_PORT', 6379);
+define('WP_REDIS_HOST', '172.20.0.2');
+define('WP_CACHE_KEY_SALT','thisismynicename');
+define('WP_REDIS_PASSWORD', 'pass$12345');
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */

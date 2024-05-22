@@ -1,5 +1,5 @@
 # Use an official PHP runtime
-FROM php:8.1-apache
+FROM php:8.2-apache
 # Enable Apache modules
 RUN a2enmod ssl && a2enmod rewrite
 RUN a2ensite default-ssl
@@ -7,6 +7,9 @@ RUN mkdir -p /etc/apache2/ssl
 RUN echo 'max_execution_time = 6666666' >> /usr/local/etc/php/conf.d/docker-php-maxexectime.ini;
 RUN echo 'upload_max_filesize = 10G' >> /usr/local/etc/php/conf.d/docker-php-upload_max_filesize.ini;
 RUN echo 'post_max_size = 10G' >> /usr/local/etc/php/conf.d/docker-php-post_max_size.ini;
+# RUN echo 'memory_limit = 10G' >> /usr/local/etc/php/conf.d/docker-php-memory_limit.ini;
+RUN echo 'memory_limit = 4084M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
+
 
 # INSTALL DEPENDENCIES
 RUN apt-get update
@@ -94,3 +97,20 @@ COPY htaccess /var/www/html/.htaccess
 
 EXPOSE 80
 EXPOSE 443
+
+RUN apt-get -y install aptitude
+RUN aptitude -y update && aptitude -y safe-upgrade
+RUN apt-get clean all
+RUN apt-get update
+RUN apt-get dist-upgrade -y
+# and optionally
+RUN apt-get autoremove 
+RUN apt -o Acquire::Check-Valid-Until=false -o Acquire::Check-date=false update
+# RUN apt-get install -y --fix-missing libpng-dev
+RUN apt install libonig-dev
+RUN apt-get update && apt-get install -y zlib1g-dev 
+## libpng-dev
+RUN docker-php-ext-install mbstring
+RUN docker-php-ext-install zip
+RUN pecl install --force redis && rm -rf /tmp/pear && docker-php-ext-enable redis
+#RUN apt-get install php8.2-gd

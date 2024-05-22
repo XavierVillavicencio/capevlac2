@@ -21,8 +21,16 @@ class LP_Certificate_Verified_Link_Layer extends LP_Certificate_Layer {
 
 		$qr_size = isset( $this->options['qr_size'] ) ? (int) $this->options['qr_size'] : 40;
 		$qr_size = $qr_size > 40 ? $qr_size : 40;
-
-		$this->options['text'] = 'https://chart.googleapis.com/chart?chs=' . $qr_size . 'x' . $qr_size . '&cht=qr&chld=L|0&chl=' . urlencode( $permalink ) . '&choe=UTF-8';
+		/*$this->options['text'] = sprintf(
+			'https://quickchart.io/qr?size=%s&text=%s',
+			40,
+			urlencode( $permalink )
+		);*/
+		$this->options['text'] = sprintf(
+			'https://api.qrserver.com/v1/create-qr-code/?size=%s&data=%s',
+			"{$qr_size}x{$qr_size}",
+			urlencode( $permalink )
+		);
 	}
 
 	public function add_field( $_options, $layer ) {

@@ -1,4 +1,3 @@
-version: "5"
 services:
   webserver:
     container_name: CapevlacApache
@@ -37,3 +36,17 @@ services:
       UPLOAD_LIMIT: 2048000K
       PMA_HOST: CapevlacMySql
       MYSQL_ROOT_PASSWORD: xqdy=]wD
+  redis:
+    image: bitnami/redis:latest
+    restart: unless-stopped
+    container_name: docker.redis
+    tty: true
+    ports:
+      - "6379:6379"
+#    networks:
+#      - docker.network
+#    volumes:
+#      - ./redis:/bitnami/redis/data
+    environment:
+      ALLOW_EMPTY_PASSWORD: false
+      REDIS_PASSWORD: pass$12345
