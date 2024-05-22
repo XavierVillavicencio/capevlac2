@@ -90,7 +90,7 @@ class LP_Certificates_Settings extends LP_Abstract_Settings_Page {
 				'custom_attributes' => array(
 					'min' => 0,
 				),
-				'desc'              => esc_html__( 'Number of items Certificate displayed in one page at page Profile. If set 0 then show all.', 'learnpress-certificates' ),
+				'desc'              => esc_html__( 'The total number of displayed certificates per page. If set 0 then show all.', 'learnpress-certificates' ),
 			),
 			array(
 				'type' => 'sectionend',

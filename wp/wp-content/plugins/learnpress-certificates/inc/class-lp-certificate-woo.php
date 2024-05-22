@@ -25,7 +25,7 @@ class LP_Certificate_WC {
 			if ( LearnPress::instance()->settings()->get( 'woo-payment.enable' ) ) {
 				// add_filter( 'learn-press/woo-cert-product-price', array( $this, 'lp_cert_set_price_woo' ), 11, 2 );
 				add_action( 'woocommerce_checkout_update_order_meta', array( $this, 'update_certificate_info_to_order_meta' ), 10, 2 );
-				add_action( 'learn-press/woo-checkout-create-lp-order-processed', array( $this, 'lp_add_user_items' ), 11, 2 );
+				//add_action( 'learn-press/woo-checkout-create-lp-order-processed', array( $this, 'lp_add_user_items' ), 11, 2 );
 				add_action( 'learn-press/added-order-item-data', array( $this, 'lp_cert_add_order_meta' ), 10, 3 );
 				add_action( 'woocommerce_cart_item_name', array( $this, 'lp_certificate_title_cart_woo' ), 10, 2 );
 				add_action( 'woocommerce_cart_item_thumbnail', array( $this, 'lp_certificate_image_cart_woo' ), 10, 2 );
@@ -180,10 +180,14 @@ class LP_Certificate_WC {
 	/**
 	 * Add info certificate to table learnpress_user_items && learnpress_user_itemmeta
 	 *
-	 * @param int              $lp_order_id
+	 * @param int $lp_order_id
 	 * @param LP_Checkout|null $lp_checkout
+	 *
+	 * @deprecated 4.0.9 instead of lp_user_cer_update on class LP_Certificate_Order
 	 */
 	public function lp_add_user_items( $lp_order_id = 0, $lp_checkout = null ) {
+		_deprecated_function( __METHOD__, '4.0.9', 'LP_Certificate_Order::lp_user_cer_update' );
+		return;
 		$woo_order_id = get_post_meta( $lp_order_id, '_woo_order_id', true );
 
 		if ( ! empty( $woo_order_id ) ) {
@@ -321,7 +325,7 @@ class LP_Certificate_WC {
 	 */
 	public function lp_certificate_image_cart_woo( $image, $cart_item ) {
 		if ( $cart_item['product_id'] && LP_ADDON_CERTIFICATES_CERT_CPT == get_post_type( $cart_item['product_id'] ) ) {
-			$cert_bg_img = get_post_meta( $cart_item['product_id'], '_lp_cert_template', true );
+			$cert_bg_img = LP_Addon_Certificates::get_link_cert_bg_by_course( $cart_item['product_id'] );
 			if ( ! empty( $cert_bg_img ) ) {
 				$image = '<img src="' . $cert_bg_img . '" width="300" height="300" />';
 			} else {

@@ -1,5 +1,9 @@
 <?php
 
+use LearnPress\Certificates\AdminCourseCertificates;
+use LearnPress\Helpers\Template;
+use LearnPress\TemplateHooks\TemplateAJAX;
+
 /**
  * Class LP_Certificates_Post_Type
  *
@@ -52,7 +56,10 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 		add_filter( 'learn-press/review-order/cart-item-name', array( $this, 'lp_cert_cart_item_name' ), 10, 3 );
 
 		// calculate subtotal by item type in cart
-		add_filter( 'learnpress/cart/calculate_sub_total/item_type_lp_cert', array( $this, 'lp_cert_cart_calculate_subtotal' ), 10, 2 );
+		add_filter( 'learnpress/cart/calculate_sub_total/item_type_lp_cert', array(
+			$this,
+			'lp_cert_cart_calculate_subtotal'
+		), 10, 2 );
 
 		// Metabox course tab.
 		add_filter(
@@ -74,16 +81,34 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 		LP_Request::register_ajax( 'update-course-certificate', array( $this, 'update_course_certificate' ) );
 
 		// add data item to cart by session.
-		add_filter( 'learn-press/get-cart-item-from-session/item_type_lp_cert', array( $this, 'lp_cert_cart_get_item_form_session' ), 10, 2 );
+		add_filter( 'learn-press/get-cart-item-from-session/item_type_lp_cert', array(
+			$this,
+			'lp_cert_cart_get_item_form_session'
+		), 10, 2 );
 		// add data item type in page checkout.
-		add_filter( 'learn-press/review-order/cart-item-product', array( $this, 'lp_cert_review_order_cart_item_cer' ), 10, 2 );
+		add_filter( 'learn-press/review-order/cart-item-product', array(
+			$this,
+			'lp_cert_review_order_cart_item_cer'
+		), 10, 2 );
 		// change link item cart if is not course in page checkout.
-		add_filter( 'learn-press/review-order/cart-item-link', array( $this, 'lp_cert_review_order_cart_item_link' ), 10, 2 );
+		add_filter( 'learn-press/review-order/cart-item-link', array(
+			$this,
+			'lp_cert_review_order_cart_item_link'
+		), 10, 2 );
+
+		add_filter( 'lp/rest/ajax/allow_callback', [ $this, 'allow_callback' ] );
+	}
+
+	public function allow_callback( $callbacks ) {
+		include_once LP_ADDON_CERTIFICATES_PATH . '/inc/admin/AdminCourseCertificates.php';
+		$callbacks[] = AdminCourseCertificates::class . ':render_certificates';
+
+		return $callbacks;
 	}
 
 	/**
 	 * @param array $link
-	 * @param array $cart_item: value by cart id;
+	 * @param array $cart_item : value by cart id;
 	 * change link item cart if is not course.
 	 */
 	public function lp_cert_review_order_cart_item_link( $link, $cart_item ) {
@@ -97,7 +122,7 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 
 	/**
 	 * @param array $item
-	 * @param array $cart_item: value by cart id;
+	 * @param array $cart_item : value by cart id;
 	 * show item cart in page checkout
 	 */
 	public function lp_cert_review_order_cart_item_cer( $item, $cart_item ) {
@@ -111,7 +136,7 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 
 	/**
 	 * @param array $data
-	 * @param array $values: value by cart id;
+	 * @param array $values : value by cart id;
 	 * add data item to cart by session
 	 */
 	public function lp_cert_cart_get_item_form_session( $data, $values ) {
@@ -123,7 +148,7 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 	}
 
 	/**
-	 * @param int   $subtotal
+	 * @param int $subtotal
 	 * @param array $cart_item
 	 * calculate subtotal by item type in cart
 	 */
@@ -138,7 +163,7 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 
 	/**
 	 * @param array $title
-	 * @param array $cart_item: value by cart id;
+	 * @param array $cart_item : value by cart id;
 	 * @param array $cart_item_key
 	 * change title item cart if is not course.
 	 */
@@ -206,9 +231,9 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 		// Verify this came from the our screen and with proper authorization,
 		// because save_post can be triggered at other times.
 		if ( ! isset( $_POST['_lp_certificate_price'] ) || ! wp_verify_nonce(
-			$_POST['certificates_fields'],
-			'lp-cert-settings-backend'
-		) ) {
+				$_POST['certificates_fields'],
+				'lp-cert-settings-backend'
+			) ) {
 			return $post_id;
 		}
 		// Now that we're authenticated, time to save the data.
@@ -243,24 +268,33 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 	}
 
 	/**
-	 * @deprecated 4.0.4
+	 * Show list certificates
+	 *
+	 * @param $post
+	 *
+	 * @return void
+	 * @since 3.0.0
+	 * @version 1.0.1
 	 */
-	public function tab_certificates( $tabs ) {
-		_deprecated_function( __METHOD__, '4.0.4' );
-		$tabs['certificates'] =
-			array(
-				'id'       => 'course-certificates',
-				'title'    => __( 'Certificates', 'learnpress-certificates' ),
-				'pages'    => LP_COURSE_CPT,
-				'icon'     => 'dashicons-welcome-learn-more',
-				'callback' => array( $this, 'display_certificates' ),
-			);
+	public function display_certificates( $post ) {
+		//LP_Addon_Certificates_Preload::$addon->admin_view( 'course-certificates.php' );
+		include_once LP_ADDON_CERTIFICATES_PATH . '/inc/admin/AdminCourseCertificates.php';
+		$args = [
+			'course_id' => $post->ID,
+			'paged'     => 1
+		];
+		/** @uses AdminCourseCertificates::render_certificates() */
+		$callBack = [
+			'class'  => AdminCourseCertificates::class,
+			'method' => 'render_certificates'
+		];
 
-		return $tabs;
-	}
-
-	public function display_certificates() {
-		LP_Addon_Certificates_Preload::$addon->admin_view( 'course-certificates.php' );
+		echo Template::instance()->nest_elements(
+			[
+				'<div id="certificate-browser" class="theme-browser lp-meta-box-course-panels">' => '</div>'
+			],
+			TemplateAJAX::load_content_via_ajax( $args, $callBack )
+		);
 	}
 
 	/**
@@ -332,7 +366,7 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 	/**
 	 * Certificates row actions.
 	 *
-	 * @param array   $actions
+	 * @param array $actions
 	 * @param WP_Post $post
 	 *
 	 * @return mixed
@@ -374,7 +408,7 @@ class LP_Certificates_Post_Type extends LP_Abstract_Post_Type {
 	 * Custom column content.
 	 *
 	 * @param string $column
-	 * @param int    $post_id
+	 * @param int $post_id
 	 */
 	public function columns_content( $column, $post_id = 0 ) {
 		global $wpdb;

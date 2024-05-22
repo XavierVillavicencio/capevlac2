@@ -53,7 +53,7 @@ class LP_REST_Admin_Certificate_Controller {
 				array(
 					'success' => true,
 					'data'    => $output,
-					'active'  => absint( LP_Certificate::get_course_certificate( $course_id ) ),
+					'active'  => LP_Certificate::get_course_certificate( $course_id ),
 				)
 			);
 		} catch ( \Throwable $th ) {
@@ -89,7 +89,7 @@ class LP_REST_Admin_Certificate_Controller {
 				array(
 					'success' => true,
 					'message' => ! empty( $certificate_id ) ? __( 'Certificate assigned successfully', 'learnpress-certificates' ) : __( 'Certificate removed successfully', 'learnpress-certificates' ),
-					'active'  => absint( LP_Certificate::get_course_certificate( $course_id ) ),
+					'active'  => LP_Certificate::get_course_certificate( $course_id ),
 				)
 			);
 		} catch ( \Throwable $th ) {

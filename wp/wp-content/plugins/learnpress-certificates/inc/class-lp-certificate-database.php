@@ -31,8 +31,11 @@ class LP_Certificate_DB extends LP_Database {
 	 * @param array $data
 	 *
 	 * @return array|object|void|null
+	 * @deprecated 4.0.9
 	 */
 	public function get_order_id_of_cert_course( $data = array() ) {
+		_deprecated_function( __METHOD__, '4.0.9' );
+		return null;
 		if ( ! isset( $data['user_id'] ) || ! isset( $data['cert_id'] ) || ! isset( $data['course_id'] ) ) {
 			return null;
 		}

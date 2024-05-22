@@ -190,6 +190,12 @@
 							el_download = el_certificate_actions.find( '.download' );
 						}
 
+						const elCerPreview = document.querySelector( el );
+						if ( elCerPreview ) {
+							const elCerConfig = elCerPreview.querySelector( '.lp-data-config-cer' );
+							elCerConfig.classList.add( 'loaded' );
+						}
+
 						// Show popup certificate
 						$( document ).triggerHandler( 'learn-press/certificates/loaded' );
 					}, args_fabric );
@@ -262,17 +268,15 @@
 			try {
 				const is_url = /^(https?|s?ftp):\/\//i.test( args.text );
 
-				if ( args.fieldType == 'verified-link' && is_url ) {
+				if ( args.fieldType === 'verified-link' && is_url ) {
 					const qr_code = new Image();
-					defaults.type = 'image';
-					defaults.height = defaults.qr_size;
-					defaults.width = defaults.qr_size;
 					qr_code.crossOrigin = 'Anonymous';
 
 					qr_code.onload = function() {
-						$object = new fabric.Image( qr_code, defaults );
+						$object = new fabric.Image( null, defaults );
+						$object.setSrc( qr_code.src, function() {}, { crossOrigin: 'Anonymous' } );
 						$canvas.add( $object );
-
+						//console.log(qr_code.src);
 						check_layers_added_done();
 					};
 
@@ -498,20 +502,21 @@
 			},
 			complete() {
 				btn.classList.remove( 'loading' );
-			}
+			},
 		} );
 	}
 
 	/**
 	 * Event add certificate to cart LP
+	 * @param form
 	 */
 	function addCertToCartLP( form ) {
 		let message = '';
 		let status = '';
 		const formData = new FormData( form );
 		const data = Object.fromEntries( formData.entries() );
-		const btn = form.querySelector('.btn-purchase-certificate');
-		btn.classList.add('loading');
+		const btn = form.querySelector( '.btn-purchase-certificate' );
+		btn.classList.add( 'loading' );
 
 		const newElMessage = document.createElement( 'div' );
 		newElMessage.classList.add( 'learn-press-message' );
@@ -580,14 +585,14 @@
 		document.addEventListener( 'submit', function( e ) {
 			const el = e.target;
 
-			if ( el.getAttribute('name') === 'form-lp-cert-purchase' ) {
+			if ( el.getAttribute( 'name' ) === 'form-lp-cert-purchase' ) {
 				e.preventDefault();
 				addCertToCartLP( el );
-			} else if ( el.getAttribute('name') === 'form-lp-cert-add-to-cart-woo' ) {
+			} else if ( el.getAttribute( 'name' ) === 'form-lp-cert-add-to-cart-woo' ) {
 				e.preventDefault();
 				addCertToCartWoo( el );
 			}
-		});
+		} );
 	} );
 }( jQuery ) );
 

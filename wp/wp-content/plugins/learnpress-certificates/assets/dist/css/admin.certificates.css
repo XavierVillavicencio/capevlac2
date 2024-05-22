@@ -476,3 +476,7 @@ body.post-type-lp_cert .wp-list-table .column-courses {
   font-weight: 600;
   flex: 0 0 auto;
 }
+
+.wp-core-ui .button.lp-cer-btn-load-more {
+  margin-top: 10px;
+}

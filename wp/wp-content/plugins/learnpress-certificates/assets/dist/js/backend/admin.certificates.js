@@ -1,8 +1,320 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./assets/src/js/backend/loadListCertificates.js":
+/*!*******************************************************!*\
+  !*** ./assets/src/js/backend/loadListCertificates.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils */ "./assets/src/js/utils.js");
+/**
+ * Load list certificates
+ *
+ * @since 4.0.9
+ * @version 1.0.1
+ */
+
+
+const loadListCertificates = () => {
+  let isLoadingMoreCer = 0;
+
+  // Events
+  document.addEventListener('click', e => {
+    const target = e.target;
+    if (target.classList.contains('lp-cer-btn-load-more')) {
+      e.preventDefault();
+      if (!isLoadingMoreCer) {
+        isLoadingMoreCer = 1;
+        loadMoreCertificates(target);
+      }
+    }
+    if (target.classList.contains('button-assign-certificate')) {
+      e.preventDefault();
+      const courseID = document.getElementById('post_ID').value;
+      const themeCertificate = target.closest('.theme');
+      const elCertificates = target.closest('.lp-certificates');
+      const certificateID = themeCertificate.dataset.id;
+      elCertificates.querySelectorAll('.theme').forEach(el => {
+        el.classList.remove('active');
+      });
+      themeCertificate.classList.add('active', 'updating');
+
+      // Update
+      updateCerOfCourse(courseID, certificateID);
+    }
+    if (target.classList.contains('button-remove-certificate')) {
+      e.preventDefault();
+      e.stopPropagation();
+      const courseID = document.getElementById('post_ID').value;
+      const themeCertificate = target.closest('.theme');
+      themeCertificate.classList.add('updating');
+      themeCertificate.classList.remove('active');
+
+      // Update
+      updateCerOfCourse(courseID, 0);
+    }
+  });
+  const updateCerOfCourse = (courseId, certId) => {
+    $.ajax({
+      url: '',
+      data: {
+        'lp-ajax': 'update-course-certificate',
+        course_id: courseId,
+        cert_id: certId
+      },
+      success() {
+        const elCertificateBrowser = document.querySelector('#certificate-browser');
+        const elThemes = elCertificateBrowser.querySelectorAll('.theme.updating');
+        elThemes.forEach(el => {
+          el.classList.remove('updating');
+        });
+      }
+    });
+  };
+  const loadMoreCertificates = btnLoadMore => {
+    const textBtnLoadMore = btnLoadMore.textContent;
+    const elTarget = btnLoadMore.closest('.lp-target');
+    if (!elTarget) {
+      return;
+    }
+    btnLoadMore.textContent = localize_lp_cer_js.i18n.loading + '...';
+    const dataSend = JSON.parse(elTarget.dataset.send);
+    dataSend.args.paged = parseInt(dataSend.args.paged) + 1;
+    elTarget.dataset.send = JSON.stringify(dataSend);
+    const url = lpDataAdmin.lp_rest_url + 'lp/v1/load_content_via_ajax/';
+    const callBack = {
+      success: response => {
+        const elAddNewTheme = document.querySelector('.add-new-theme');
+        const {
+          status,
+          message,
+          data
+        } = response;
+        if ('success' === status) {
+          const elTmp = document.createElement('div');
+          elTmp.innerHTML = data.content;
+          const elListCertificates = elTmp.querySelector('.theme');
+          elAddNewTheme.insertAdjacentElement('beforebegin', elListCertificates);
+          if (data.paged === data.total_pages) {
+            btnLoadMore.remove();
+          }
+          buildCanvas();
+        } else if ('error' === status) {
+          elTarget.innerHTML = message;
+        }
+      },
+      error: error => {
+        console.log(error);
+      },
+      completed: () => {
+        isLoadingMoreCer = 0;
+        btnLoadMore.textContent = textBtnLoadMore;
+      }
+    };
+    window.lpAJAXG.fetchAPI(url, dataSend, callBack);
+  };
+  const buildCanvas = () => {
+    const el_lp_data_config_cer = document.querySelectorAll('.lp-data-config-cer:not(.loaded)');
+    el_lp_data_config_cer.forEach(el => {
+      const data_config_cer = JSON.parse(el.value) || {};
+      const id_div_parent = '#' + el.closest('div').getAttribute('id');
+      window.LP_Certificate(id_div_parent, data_config_cer);
+    });
+  };
+
+  // Listen el courses load infinite have just created.
+  (0,_utils__WEBPACK_IMPORTED_MODULE_0__.listenElementCreated)(node => {
+    if (node.classList.contains('lp-certificates')) {
+      buildCanvas();
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadListCertificates);
+
+/***/ }),
+
+/***/ "./assets/src/js/utils.js":
+/*!********************************!*\
+  !*** ./assets/src/js/utils.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   listenElementCreated: () => (/* binding */ listenElementCreated),
+/* harmony export */   listenElementViewed: () => (/* binding */ listenElementViewed),
+/* harmony export */   lpAddQueryArgs: () => (/* binding */ lpAddQueryArgs),
+/* harmony export */   lpFetchAPI: () => (/* binding */ lpFetchAPI),
+/* harmony export */   lpGetCurrentURLNoParam: () => (/* binding */ lpGetCurrentURLNoParam)
+/* harmony export */ });
+/**
+ * Fetch API.
+ *
+ * @param url
+ * @param data
+ * @param functions
+ * @since 4.2.5.1
+ * @version 1.0.1
+ */
+const lpFetchAPI = (url, data = {}, functions = {}) => {
+  if ('function' === typeof functions.before) {
+    functions.before();
+  }
+  fetch(url, {
+    method: 'GET',
+    ...data
+  }).then(response => response.json()).then(response => {
+    if ('function' === typeof functions.success) {
+      functions.success(response);
+    }
+  }).catch(err => {
+    if ('function' === typeof functions.error) {
+      functions.error(err);
+    }
+  }).finally(() => {
+    if ('function' === typeof functions.completed) {
+      functions.completed();
+    }
+  });
+};
+
+/**
+ * Get current URL without params.
+ *
+ * @since 4.2.5.1
+ */
+const lpGetCurrentURLNoParam = () => {
+  let currentUrl = window.location.href;
+  const hasParams = currentUrl.includes('?');
+  if (hasParams) {
+    currentUrl = currentUrl.split('?')[0];
+  }
+  return currentUrl;
+};
+const lpAddQueryArgs = (endpoint, args) => {
+  const url = new URL(endpoint);
+  Object.keys(args).forEach(arg => {
+    url.searchParams.set(arg, args[arg]);
+  });
+  return url;
+};
+
+/**
+ * Listen element viewed.
+ *
+ * @param el
+ * @param callback
+ * @since 4.2.5.8
+ */
+const listenElementViewed = (el, callback) => {
+  const observerSeeItem = new IntersectionObserver(function (entries) {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        callback(entry);
+      }
+    }
+  });
+  observerSeeItem.observe(el);
+};
+
+/**
+ * Listen element created.
+ *
+ * @param callback
+ * @since 4.2.5.8
+ */
+const listenElementCreated = callback => {
+  const observerCreateItem = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.addedNodes) {
+        mutation.addedNodes.forEach(function (node) {
+          if (node.nodeType === 1) {
+            callback(node);
+          }
+        });
+      }
+    });
+  });
+  observerCreateItem.observe(document, {
+    childList: true,
+    subtree: true
+  });
+  // End.
+};
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
 /*!*****************************************************!*\
   !*** ./assets/src/js/backend/admin.certificates.js ***!
   \*****************************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _loadListCertificates_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loadListCertificates.js */ "./assets/src/js/backend/loadListCertificates.js");
 /* eslint-disable no-var */
 /**
  * Plugin LearnPress Certificates.
@@ -13,6 +325,8 @@ var __webpack_exports__ = {};
  *
  * Nhamdv -  Compatible with jQuery > 3.0.0
  */
+
+
 (function ($) {
   var mediaSelector = {
     __onSelect: null,
@@ -102,41 +416,6 @@ var __webpack_exports__ = {};
         };
       }
     };
-
-    // Global
-    // TODO: move code to another ex: move to admin.assign.certificate.js
-    function ajaxUpdateCourseCertificate(id, cert) {
-      $.ajax({
-        url: '',
-        data: {
-          'lp-ajax': 'update-course-certificate',
-          course_id: id,
-          cert_id: cert
-        },
-        success() {
-          $('#certificate-browser').find('.theme.updating').removeClass('updating');
-        }
-      });
-    }
-    $(document).on('click', '.button-assign-certificate', function (e) {
-      e.preventDefault();
-      const $wrapper = $('#certificate-browser').find('.themes'),
-        $themes = $wrapper.find('.theme'),
-        $selected = $(this).closest('.theme');
-      $themes.removeClass('active');
-      $wrapper.prepend($selected.addClass('active updating'));
-
-      // Update
-      ajaxUpdateCourseCertificate($('#post_ID').val(), $selected.data('id'));
-    }).on('click', '.button-remove-certificate', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      $(this).closest('.theme').removeClass('active').addClass('updating');
-
-      // Update
-      ajaxUpdateCourseCertificate($('#post_ID').val(), 0);
-    });
-    // TODO: move code to another ex: move to admin.assign.certificate.js
 
     // Vue js
     if (typeof lpCertificatesSettings === 'undefined') {
@@ -804,6 +1083,9 @@ var __webpack_exports__ = {};
     });
   });
 })(jQuery);
+(0,_loadListCertificates_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+})();
+
 /******/ })()
 ;
 //# sourceMappingURL=admin.certificates.js.map

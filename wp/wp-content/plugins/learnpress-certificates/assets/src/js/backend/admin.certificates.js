@@ -8,6 +8,9 @@
  *
  * Nhamdv -  Compatible with jQuery > 3.0.0
  */
+
+import loadListCertificates from './loadListCertificates.js';
+
 ( function( $ ) {
 	var mediaSelector = {
 		__onSelect: null,
@@ -105,42 +108,6 @@
 				};
 			},
 		};
-
-		// Global
-		// TODO: move code to another ex: move to admin.assign.certificate.js
-		function ajaxUpdateCourseCertificate( id, cert ) {
-			$.ajax( {
-				url: '',
-				data: {
-					'lp-ajax': 'update-course-certificate',
-					course_id: id,
-					cert_id: cert,
-				},
-				success() {
-					$( '#certificate-browser' ).find( '.theme.updating' ).removeClass( 'updating' );
-				},
-			} );
-		}
-
-		$( document ).on( 'click', '.button-assign-certificate', function( e ) {
-			e.preventDefault();
-			const $wrapper = $( '#certificate-browser' ).find( '.themes' ),
-				$themes = $wrapper.find( '.theme' ),
-				$selected = $( this ).closest( '.theme' );
-			$themes.removeClass( 'active' );
-			$wrapper.prepend( $selected.addClass( 'active updating' ) );
-
-			// Update
-			ajaxUpdateCourseCertificate( $( '#post_ID' ).val(), $selected.data( 'id' ) );
-		} ).on( 'click', '.button-remove-certificate', function( e ) {
-			e.preventDefault();
-			e.stopPropagation();
-			$( this ).closest( '.theme' ).removeClass( 'active' ).addClass( 'updating' );
-
-			// Update
-			ajaxUpdateCourseCertificate( $( '#post_ID' ).val(), 0 );
-		} );
-		// TODO: move code to another ex: move to admin.assign.certificate.js
 
 		// Vue js
 		if ( typeof lpCertificatesSettings === 'undefined' ) {
@@ -878,3 +845,5 @@
 		} );
 	} );
 }( jQuery ) );
+
+loadListCertificates();
